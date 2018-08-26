@@ -1,6 +1,6 @@
 
 	if (typeof erc20contract_address == "undefined") {
-		var erc20contract_address = "0x9671Bf5124Cb4Bd30027152FAFe8409eA46677E4";
+		var erc20contract_address = "0xFFc63b9146967A1ba33066fB057EE3722221aCf0";
 		var option_etherscan_api = 'https://ropsten.etherscan.io'; //change to https://api.etherscan.io for mainnet
 		var option_registration_enabled = true;
 		var option_registration_backend = '';///'subscribe.php'; //you can use remote address like https://yoursite.com/subscribe.php
