@@ -35,7 +35,7 @@
 			if (tosell = prompt('How many Alpha you want to sell?',$("#skoko").val())) {
 				sendRwTr(0,[tosell],"sell","#consolesell");
 			}
-"		}
+		}
 	}
 	
 	function try2withdrawETH() { $("#consolewithdraw").html('.:...::');
