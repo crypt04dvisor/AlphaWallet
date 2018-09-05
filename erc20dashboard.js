@@ -19,7 +19,7 @@
 			$("#consolebuy").html("You need "+amounteth+"+0.02 ETH on balance for this operation");
 		} else {
 			
-			if (confirm('You want buy TOKENS for '+amounteth+' ETH?')) {
+			if (confirm('You want buy Alpha for '+amounteth+' ETH?')) {
 				
 				sendRwTr(amounteth,"","","#consolebuy");
 			}
@@ -32,7 +32,7 @@
 			alert("You have "+$("#skoko").val()+" tokens");
 		} else {
 			
-			if (tosell = prompt('How many NXP you want to sell?',$("#skoko").val())) {
+			if (tosell = prompt('How many Alpha you want to sell?',$("#skoko").val())) {
 				sendRwTr(0,[tosell],"sell","#consolesell");
 			}
 		}
@@ -147,7 +147,7 @@
 							 success: function (d) {
 								
 								console.log("balance check ",d,d.result);
-								_balance = d.result / 1000000000000000000;
+								_balance = d.result / 1;
 								 $(".balance").html(_balance+" ETH");
 								
 								if (_balance > 0.01) {
@@ -223,7 +223,7 @@ function recalc() {
 	}
 
 	function getmsg() {
-		return "dashboard.html \r\n\r\nEthereum address: "+openkey+"  \r\nMnemonic Phrase: '"+localStorage.getItem("d12keys")+"'\r\n\r\n(HD derivation path is m/0'/0'/0')\r\n\r\nHow to access tokens and ethers: \r\n1. Go here https://www.myetherwallet.com/#send-transaction \r\n2. Select 'Mnemonic Phrase'\r\n3. Insert Phrase and set derivation path is m/0'/0'/0' \r\n3. Click 'Unlock' \r\n4. Add custom token > "+erc20contract_address+" (A,0)";
+		return "dashboard.html \r\n\r\nEthereum address: "+openkey+"  \r\nMnemonic Phrase: '"+localStorage.getItem("d12keys")+"'\r\n\r\n(HD derivation path is m/0'/0'/0')\r\n\r\nHow to access tokens and ethers: \r\n1. Go here https://www.myetherwallet.com/#send-transaction \r\n2. Select 'Mnemonic Phrase'\r\n3. Insert Phrase and set derivation path is m/0'/0'/0' \r\n3. Click 'Unlock' \r\n4. Add custom token > "+erc20contract_address+" (A,18)";
 	}
 	
 	$( function() {
