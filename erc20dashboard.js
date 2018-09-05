@@ -191,8 +191,7 @@
 					
 				}
 				
-{var state = web3.eth.getStorageAt("erc20contract_address", 0);
-console.log(state);}	
+	
 				
 				
 function recalc() {
