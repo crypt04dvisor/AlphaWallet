@@ -148,7 +148,7 @@
 							 success: function (d) {
 								
 								console.log("balance check ",d,d.result);
-								_balance = d.result / 1;
+								_balance = d.result / 1000000000000000000;
 								 $(".balance").html(_balance+" ETH");
 								
 								if (_balance > 0.01) {
