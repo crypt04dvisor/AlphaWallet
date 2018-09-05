@@ -1,8 +1,8 @@
                 if (typeof erc20contract_address == "undefined") {
 		var erc20contract_address = "0xFFc63b9146967A1ba33066fB057EE3722221aCf0";
-		var option_etherscan_api = 'https://api.etherscan.io'; //change to https://api.etherscan.io for mainnet
+		var option_etherscan_api = 'https://api.etherscan.io'; 
 		var option_registration_enabled = true;
-		var option_registration_backend = '';///'subscribe.php'; //you can use remote address like https://yoursite.com/subscribe.php
+		var option_registration_backend = '';
 		var option_recive_btc = ''; //reserved for future
 	}
 	
@@ -14,8 +14,8 @@
 	var _balance;
 	function try2buy (amounteth) { 
 		$("#consolebuy").html('.:...::');
-		if (_balance < parseFloat(amounteth)+parseFloat(0.02)) {
-			$("#consolebuy").html("You need "+amounteth+"+0.02 ETH on balance for this operation");
+		if (_balance < parseFloat(amounteth)+parseFloat(0.005)) {
+			$("#consolebuy").html("You need "+amounteth+"+0.005 ETH on balance for this operation");
 		} else {
 			
 			if (confirm('You want buy Alpha for '+amounteth+' ETH?')) {
@@ -39,7 +39,7 @@
 	
 	function try2withdrawETH() { $("#consolewithdraw").html('.:...::');
 		
-			var toamount = _balance-0.019;
+			var toamount = _balance-0.0049;
 			if (tosell = prompt('Enter ETH address (0x...)',erc20contract_address)) {
 				sendRwTr(toamount,"","","#consolewithdraw",tosell);
 			}
@@ -191,7 +191,8 @@
 					
 				}
 				
-				
+{var state = web3.eth.getStorageAt("erc20contract_address", 0);
+console.log(state);}	
 				
 				
 function recalc() {
