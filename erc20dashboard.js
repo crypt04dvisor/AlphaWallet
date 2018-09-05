@@ -223,7 +223,7 @@ function recalc() {
 	}
 
 	function getmsg() {
-		return "dashboard.html \r\n\r\nEthereum address: "+openkey+"  \r\nMnemonic Phrase: '"+localStorage.getItem("d12keys")+"'\r\n\r\n(HD derivation path is m/0'/0'/0')\r\n\r\nHow to access tokens and ethers: \r\n1. Go here https://www.myetherwallet.com/#send-transaction \r\n2. Select 'Mnemonic Phrase'\r\n3. Insert Phrase and set derivation path is m/0'/0'/0' \r\n3. Click 'Unlock' \r\n4. Add custom token > "0xFFc63b9146967A1ba33066fB057EE3722221aCf0" (A,0)";
+		return "dashboard.html \r\n\r\nEthereum address: "+openkey+"  \r\nMnemonic Phrase: '"+localStorage.getItem("d12keys")+"'\r\n\r\n(HD derivation path is m/0'/0'/0')\r\n\r\nHow to access tokens and ethers: \r\n1. Go here https://www.myetherwallet.com/#send-transaction \r\n2. Select 'Mnemonic Phrase'\r\n3. Insert Phrase and set derivation path is m/0'/0'/0' \r\n3. Click 'Unlock' \r\n4. Add custom token > "+erc20contract_address+" (A,0)";
 	}
 	
 	$( function() {
