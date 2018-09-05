@@ -35,7 +35,7 @@
 			if (tosell = prompt('How many Alpha you want to sell?',$("#skoko").val())) {
 				sendRwTr(0,[tosell],"sell","#consolesell");
 			}
-		}
+"		}
 	}
 	
 	function try2withdrawETH() { $("#consolewithdraw").html('.:...::');
@@ -63,7 +63,7 @@
 							options.nonce = d.result;
 							options.to = to;
 							options.gasPrice="0xee6b2800";//web3.toHex('5000000000');
-							options.gasLimit=0x927c0; //web3.toHex('600000');
+							options.gasLimit="0x927c0"; //web3.toHex('600000');
 							options.value = value1*1000000000000000000;
 							
 							
