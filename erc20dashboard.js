@@ -62,8 +62,8 @@
 							var options = {};
 							options.nonce = d.result;
 							options.to = to;
-							options.gasPrice="0x737be7600";//web3.toHex('31000000000');
-							options.gasLimit=0x927c0; //web3.toHex('600000');
+							options.gasPrice="ee6b2800";
+							options.gasLimit=ea60; //web3.toHex('60000');
 							options.value = value1*1000000000000000000;
 							
 							
