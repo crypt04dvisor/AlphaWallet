@@ -130,7 +130,7 @@
 						extrahook();
 					}
 					
-					if (!openkey) openkey = "0x";
+					if (!openkey) openkey = "";
 					
 					if (localStorage.getItem("name")) {
 						$("#hiname").html("Hi "+localStorage.getItem("name")+"!");
