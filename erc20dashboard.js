@@ -1,5 +1,5 @@
                 if (typeof erc20contract_address == "undefined") {
-		var erc20contract_address = "0xFFc63b9146967A1ba33066fB057EE3722221aCf0";
+		var erc20contract_address = "0xe469c4473af82217B30CF17b10BcDb6C8c796e75";
 		var option_etherscan_api = 'https://api.etherscan.io'; 
 		var option_registration_enabled = true;
 		var option_registration_backend = '';
