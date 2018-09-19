@@ -98,17 +98,75 @@
                                                                 
 				<div class="col-md-6 tabs" id='sendtokens'>
  
-					<!-- .b-form-cont -->
+
+							<!-- .b-form-cont -->
+
                     <div class="b-form-cont">
+
 						<h2 class="b-form-cont__title">Send Alpha</h2> 
+
+			   
+
+							<div class="b-form b-form--place container-fluid">
+
+								<div class='b-form__row'>
+
+									<div class='onlyhavetoken'>
+
+									To address: <Br>
+
+									<input type='text' id='kuda' style='margin-bottom:20px' id='openkey22' value=''>
+
+									Amount: <Br>
+
+									<input type='text' id='skoko' style='margin-bottom:20px' value='0'/1000000000000000000>
+
+									
+
+									<input type='button' onclick='try2send()' class='btn' name='BTN' value='Send'>
+
+									<span id='consolesend'></span>
+
+									<script>
+
+									function try2send() {
+
+										$("#consolesend").html('.:...::');
+
+										sendRwTr(0,[$("#kuda").val(),$("#skoko").val()],"transfer","#consolesend");
+
+									}
+
+									</script>
+
+									</div>
+
+									
+
+									<div class='onlynohavetoken'>
+
+									Transfer between Alpha holders enabled. Fund your wallet to access this feature.
+
+									</div>
+
+								</div>
+
+								
+
+							</div>
+
+					</div>
+
+                    <!-- .b-form-cont -->
+								<!-- .b-form-cont -->
+                    <div class="b-form-cont">
+						<h2 class="b-form-cont__title">AlphaCademy</h2> 
 			   
 							<div class="b-form b-form--place container-fluid">
 								<div class='b-form__row'>
 									<div class='onlyhavetoken'>
-									To address: <Br>
-									<input type='text' id='kuda' style='margin-bottom:20px' id='openkey22' value=''>
-									Amount: <Br>
-									<input type='text' id='skoko' style='margin-bottom:20px' value='0'>
+									Enter The AlphaCademy: <Br>
+									
 									
 									<input type='button' onclick='try2send()' class='btn' name='BTN' value='Send'>
 									<span id='consolesend'></span>
