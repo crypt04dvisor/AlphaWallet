@@ -167,11 +167,11 @@
 								
 								amount = parseInt(d.result,16);
 								console.log("-->",d.result);
-								$(".balacnetokensnocss").html(amount);
+								$(".balacnetokensnocss").html(amount/1000000000000000000);
 								$("#sk").val(amount);
 								$("#skoko").val(amount);
 								
-								$(".balacnetokens").html(amount);
+								$(".balacnetokens").html(amount/1000000000000000000);
 								if (parseInt(d.result,16)>0) {
 									$(".onlyhavetoken").show();
 									$(".onlynohavetoken").hide();
