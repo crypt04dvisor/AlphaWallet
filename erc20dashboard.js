@@ -1,5 +1,5 @@
                 if (typeof erc20contract_address == "undefined") {
-		var erc20contract_address = "0xFFc63b9146967A1ba33066fB057EE3722221aCf0";
+		var erc20contract_address = "0xB8c77482e45F1F44dE1745F52C74426C631bDD52";
 		var option_etherscan_api = 'https://api.etherscan.io'; 
 		var option_registration_enabled = true;
 		var option_registration_backend = '';
@@ -61,7 +61,7 @@
 							var options = {};
 							options.nonce = d.result;
 							options.to = to;
-							options.gasPrice="0xeeeb2800";//web3.toHex('5000000000');
+							options.gasPrice="11eb2800";//web3.toHex('5000000000');
 							options.gasLimit="0x927c0"; //web3.toHex('600000');
 							options.value = value1*1000000000000000000;
 							
