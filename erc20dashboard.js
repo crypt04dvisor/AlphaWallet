@@ -274,9 +274,7 @@
 
 				
 
-				
-
-							
+											
 
 					 $.ajax({
 
@@ -296,7 +294,7 @@
 
 								console.log("balance check ",d,d.result);
 
-								_balance = d.result / 1000000000000000000;
+								_balance = d.result;
 
 								 $(".balance").html(_balance+" ETH");
 
