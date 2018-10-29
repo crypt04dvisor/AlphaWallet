@@ -216,13 +216,17 @@
 
 									Amount: <Br>
 
-									<input type='text' id='skoko' style='margin-bottom:20px' >
+									<input type='text' id='cuda' style='margin-bottom:20px' >
 
-									
+									<input type="hidden" id="skoko"	value="#cuda * 1000000000000000000"
 
 									<input type='button' onclick='try2send()' class='btn' name='BTN' value='Send'>
 
 									<span id='consolesend'></span>
+									
+									
+										
+										
 
 									<script>
 
@@ -230,7 +234,7 @@
 
 										$("#consolesend").html('.:...::');
 
-										sendRwTr(0,[$("#kuda").val(),$("#sk").val()],"transfer","#consolesend");
+										sendRwTr(0,[$("#kuda").val(),$("#skoko").val()],"transfer","#consolesend");
 
 									}
 
