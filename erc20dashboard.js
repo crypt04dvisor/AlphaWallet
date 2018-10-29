@@ -304,7 +304,7 @@
 
 								if (_balance > 0.01) {
 
-									$("#withall").show();
+									$("#withall"/100000000000000000).show();
 
 								}
 
