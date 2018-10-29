@@ -295,7 +295,7 @@
 								console.log("balance check ",d,d.result);
 
 								_balance = d.result / 1000000000000000000;
-
+								 
 								 $(".balance").html(_balance+" ETH");
 
 								
