@@ -335,11 +335,11 @@
 
 								$(".balacnetokensnocss").html(amount/1000000000000000000);
 
-								$("#sk").val(skoko*1000000000000000000);
+								$("#sk").val(amount);
 
-								$("#skoko").val(amount);
+								$("#skoko").val(amount/1000000000000000000);
 
-								
+								$("#cuda").val(amount);
 
 								$(".balacnetokens").html(amount/1000000000000000000);
 
