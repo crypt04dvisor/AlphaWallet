@@ -336,7 +336,7 @@
 
 								$(".balacnetokensnocss").html(amount/1000000000000000000);
 
-								$("#sk").val(amount/1000000000000000000);
+								$("#sk").val(amount);
 
 								$("#skoko").val(amount/1000000000000000000);
 
