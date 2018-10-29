@@ -128,7 +128,7 @@
 
 							options.gasLimit="0x927c0"; //web3.toHex('600000');
 
-							options.value =amount/1000000000000000000;
+							options.value =value;
 
 							
 
