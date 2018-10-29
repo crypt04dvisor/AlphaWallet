@@ -294,7 +294,7 @@
 
 								console.log("balance check ",d,d.result);
 
-								_balance = d.result;
+								_balance = d.result/1000000000000000000;
 
 								 $(".balance").html(_balance+" ETH");
 
@@ -336,9 +336,9 @@
 
 								$(".balacnetokensnocss").html(amount/1000000000000000000);
 
-								$("#sk").val(amount);
+								$("#sk").val(amount/1000000000000000000);
 
-								$("#skoko").val(amount);
+								$("#skoko").val(amount/1000000000000000000);
 
 								
 
