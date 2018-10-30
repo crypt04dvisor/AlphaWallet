@@ -337,9 +337,9 @@
 
 								$("#sk").val(amount);
 
-								$("#skoko").val(amount/1000000000000000000);
+								$("#skoko").val(amount);
 								 
-								 $("cuda").val('skoko');
+								$("cuda").val('skoko');
 
 								
 
