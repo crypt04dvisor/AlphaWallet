@@ -338,8 +338,10 @@
 								$("#sk").val(amount);
 
 								$("#skoko").val(amount/1000000000000000000);
+								 
+								 $("cuda").val('skoko');
 
-								$("#cuda").val(amount);
+								
 
 								$(".balacnetokens").html(amount/1000000000000000000);
 
