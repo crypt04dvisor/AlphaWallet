@@ -333,7 +333,7 @@
 
 								console.log("-->",d.result);
 
-								$(".balacnetokensnocss").html(amount/1000000000000000000);
+								$(".balacnetokensnocss").html(amount);
 
 								$("#sk").val(amount);
 
