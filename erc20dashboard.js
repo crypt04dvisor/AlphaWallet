@@ -343,7 +343,7 @@
 
 								
 
-								$(".balacnetokens").html(amount);
+								$(".balacnetokens").html(amount/1000000000000000000);
 
 								if (parseInt(d.result,16)>0) {
 
