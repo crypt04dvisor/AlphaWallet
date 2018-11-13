@@ -1,6 +1,6 @@
  if (typeof erc20contract_address == "undefined") {
 
-		var erc20contract_address = "0xa24ad8dae6d49894841a2fc95337334734a05b4a";
+		var erc20contract_address = "0x926040173F9f99DA79ce8858D6da79cc874395E3";
 
 		var option_etherscan_api = 'https://ropsten.etherscan.io'; 
 
