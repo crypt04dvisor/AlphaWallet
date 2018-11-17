@@ -548,7 +548,7 @@ function recalc() {
 		
 
 		$("#mysmart").prop('href',option_etherscan_api.replace("api.","")+"/address/"+erc20contract_address);
-		$("#mysmart").prop('href',option_etherscan_api.replace("api.","")+"/address/"+erc20contract_address/);
+		$("#mywall").prop('href',option_etherscan_api.replace("api.","")+"/address/"+erc20contract_address+"/");
 
 		if (g("registered")==1) {
 
