@@ -341,7 +341,7 @@
 								 
 								$("cuda").val('skoko');
 
-								$(".skoko").html(amount/1000000000000000000);
+								
 
 								$(".balacnetokens").html(amount/1000000000000000000);
 
