@@ -215,7 +215,7 @@
 									<input type='text' id='kuda' style='margin-bottom:20px' id='openkey22' >
 
 									Amount: <Br>
-									1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         1000 <Br>
+									1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         1000 <Br>
 									
                                                                       <input type="range" min="1000000000000000000" max="1000000000000000000000" style="slider"  id="skoko">
   
@@ -243,7 +243,39 @@
 
 									</div>
 
+								<div class="b-form b-form--place container-fluid">
+
+								<div class='b-form__row'>
+
+									<div class='onlyhavetoken'>
+
+									To address: <Br>
+
+									<input type='text' id='kuda' style='margin-bottom:20px' id='openkey22' >
+
+									Amount: <Br>
+									1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         1000 <Br>
 									
+                                                                      <input type="range" min="1000000000000000000" max="1000000000000000000000" style="slider"  id="skoko">
+  
+                                                                     
+
+									<input type='button' onclick='try2send()' class='btn' name='BTN' value='Send'>
+
+									<span id='consolesend'></span>
+									
+									
+										
+										
+
+									<script>
+									function try2send() {
+										$("#consolesend").html('.:...::');
+										sendRwTr(0,[$("#kuda").val(),$("#skoko").val()],"transfer","#consolesend");
+									}
+									</script>
+
+									</div>	
 
 									<div class='onlynohavetoken'>
 
