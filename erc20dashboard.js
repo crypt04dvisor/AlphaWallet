@@ -334,14 +334,14 @@
 								console.log("-->",d.result);
 
 								$(".balacnetokensnocss").val(amount/1000000000000000000);
-
+								
 								$("#sk").val(amount);
 
 								$("#skoko").val(amount);
 								 
 								$("cuda").val('skoko');
 
-								
+								$("balacnesend").html(amount/1000000000000000000)
 
 								$(".balacnetokens").html(amount/1000000000000000000);
 
