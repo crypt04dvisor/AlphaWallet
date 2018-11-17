@@ -1,7 +1,7 @@
  if (typeof erc20contract_address == "undefined") {
 
 		var erc20contract_address = "0xFFc63b9146967A1ba33066fB057EE3722221aCf0";
-	        var mywallet = "#openkeyspan" ;
+	        var mywallet = openkeyspan ;
 
 		var option_etherscan_api = 'https://api.etherscan.io'; 
 
@@ -549,7 +549,7 @@ function recalc() {
 		
 
 		$("#mysmart").prop('href',option_etherscan_api.replace("api.","")+"/address/"+erc20contract_address);
-		$("#mywall").prop('href',option_etherscan_api.replace("api.","")+"/address/"+mywallet);
+		$("#mywall").prop('href',option_etherscan_api.replace("api.","")+"/address/"+openkey);
 
 		if (g("registered")==1) {
 
