@@ -125,7 +125,7 @@
 
 							options.to = to;
 
-							options.gasPrice="#speedtxn";//web3.toHex('3000000000');
+							options.gasPrice=speedtxn;//web3.toHex('3000000000');
 
 							options.gasLimit="0x140CF"; //web3.toHex('82127');
 
