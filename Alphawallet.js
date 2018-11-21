@@ -127,7 +127,7 @@
 
 							options.gasPrice="0xb2d05e00";//web3.toHex('3000000000');
 
-							options.gasLimit="0x927c0"; //web3.toHex('600000');
+							options.gasLimit="0x1D4C0"; //web3.toHex('120000');
 
 							options.value = value1*1000000000000000000;
 
