@@ -40,14 +40,7 @@
 					function sendRwTr(value1,args,abifunc,callback="#consolesell",to=erc20contract_address) {
 
 					console.log("sendRwTr");
-					 if (value > "balacnetokensnocss") {
-     						 greeting = "Oops Try to send less token";
- 							   } else {
-       							 greeting = "POST";
-   								 }
-  						  document.getElementById("demo").innerHTML = greeting;
-							
-
+					 
 					$.ajax({
 
 					type: "POST",
