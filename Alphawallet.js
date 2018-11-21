@@ -332,7 +332,7 @@
 
 								$(".balacnetokensnocss").val(amount/1000000000000000000);
 								
-								$("#speedtxn").val(amount);
+								$("speedtxn").html();
 
 								$("#skoko").val(amount/1000000000000000000);
 								 
