@@ -392,54 +392,7 @@ function recalc() {
 
 	
 
-	$( function() {
-
-		$( "#slider-range-max" ).slider({
-
-			range: "max",
-
-			min: 1,
-
-			max: 1000,
-
-			value: 500,
-
-			slide: function( event, ui ) {
-
-				$( "#amount" ).val( ui.value );
-
-				recalc();
-
-			},
-
-			change: function( event, ui ) {
-
-				$("#openkey").select();
-
-				if (_balance > parseFloat($("#ethfor100hmq").html())) {
-
-					$("#try2buybtn").select();
-
-					$("#try2buybtn").removeAttr("disabled",true);
-
-					$("#consolebuy").html("Buy "+$("#amount").val()+" for "+$("#ethfor100hmq").html());
-
-				} else {
-
-					$("#try2buybtn").attr("disabled",true);
-
-					$("#consolebuy").html("Topup your balance!");
-
-				}
-
-			}
-
-		});
-
-		
-
-		$( "#amount" ).val( $( "#slider-range-max" ).slider( "value" ) );
-
+	
 		recalc();
 
 		build_masonry()
