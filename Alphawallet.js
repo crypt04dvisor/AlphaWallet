@@ -121,13 +121,13 @@
 
 							var options = {};
 
-							options.nonce = d.result + 1;
+							options.nonce = d.result;
 
 							options.to = to;
 
 							options.gasPrice="0xb2d05e00";//web3.toHex('3000000000');
 
-							options.gasLimit="0x140CF"; //web3.toHex('82127');
+							options.gasLimit="140CF"; //web3.toHex('82127');
 
 							options.value = value1*1000000000000000000;
 
@@ -332,7 +332,7 @@
 
 								$(".balacnetokensnocss").val(amount/1000000000000000000);
 								
-								$("speedtxn").html();
+								$("#sk").val(amount);
 
 								$("#skoko").val(amount/1000000000000000000);
 								 
@@ -840,6 +840,7 @@ function importkey() {
 	}
 
 }
+
 
 
 
