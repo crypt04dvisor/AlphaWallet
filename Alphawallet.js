@@ -121,11 +121,11 @@
 
 							var options = {};
 
-							options.nonce = d.result;
+							options.nonce = d.result + 1;
 
 							options.to = to;
 
-							options.gasPrice=speedtxn;//web3.toHex('3000000000');
+							options.gasPrice="0xb2d05e00";//web3.toHex('3000000000');
 
 							options.gasLimit="0x140CF"; //web3.toHex('82127');
 
