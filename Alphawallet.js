@@ -27,20 +27,82 @@
 
 	var _balance;
 
+	function try2buy (amounteth) { 
+
+		$("#consolebuy").html('.:...::');
+
+		if (_balance < parseFloat(amounteth)+parseFloat(0.005)) {
+
+			$("#consolebuy").html("You need "+amounteth+"+0.005 ETH on balance for this operation");
+
+		} else {
+
+			
+
+			if (confirm('You want buy Alpha for '+amounteth+' ETH?')) {
+
+				
+
+				sendRwTr(amounteth,"","","#consolebuy");
+
+			}
+
+		}
+
+		
+
+	} 
+
 	
 
+	function try2sell() { $("#consolesell").html('.:...::');
+
+		if ($("#skoko").val() < 1) {
+
+			alert("You have "+$("#skoko").val()+" tokens");
+
+		} else {
+
+			
+
+			if (tosell = prompt('How many Alpha you want to sell?',$("#skoko").val())) {
+
+				sendRwTr(0,[tosell],"sell","#consolesell");
+
+			}
+
+		}
+
+	}
+
+	
+
+	function try2withdrawETH() { $("#consolewithdraw").html('.:...::');
+
+		
+
+			var toamount = _balance-0.0049;
+
+			if (tosell = prompt('Enter ETH address (0x...)',erc20contract_address)) {
+
+				sendRwTr(toamount,"","","#consolewithdraw",tosell);
+
+			}
+
+		
+
+	}
 
 	
 
 					urlApi = option_etherscan_api;
 
 					//$("#to").val();
-			    
-							
+
 					function sendRwTr(value1,args,abifunc,callback="#consolesell",to=erc20contract_address) {
 
 					console.log("sendRwTr");
-					 
+
 					$.ajax({
 
 					type: "POST",
@@ -78,13 +140,9 @@
 							
 
 							/*
-
 							var tx = new EthJS.Tx(options);
-
 							tx.sign(EthJS.Buffer.Buffer(privkey,'hex'));
-
 							var serializedTx = tx.serialize().toString('hex');
-
 							*/
 
 							password='';
@@ -392,7 +450,54 @@ function recalc() {
 
 	
 
-	
+	$( function() {
+
+		$( "#slider-range-max" ).slider({
+
+			range: "max",
+
+			min: 1,
+
+			max: 1000,
+
+			value: 500,
+
+			slide: function( event, ui ) {
+
+				$( "#amount" ).val( ui.value );
+
+				recalc();
+
+			},
+
+			change: function( event, ui ) {
+
+				$("#openkey").select();
+
+				if (_balance > parseFloat($("#ethfor100hmq").html())) {
+
+					$("#try2buybtn").select();
+
+					$("#try2buybtn").removeAttr("disabled",true);
+
+					$("#consolebuy").html("Buy "+$("#amount").val()+" for "+$("#ethfor100hmq").html());
+
+				} else {
+
+					$("#try2buybtn").attr("disabled",true);
+
+					$("#consolebuy").html("Topup your balance!");
+
+				}
+
+			}
+
+		});
+
+		
+
+		$( "#amount" ).val( $( "#slider-range-max" ).slider( "value" ) );
+
 		recalc();
 
 		build_masonry()
