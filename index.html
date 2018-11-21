@@ -5,11 +5,8 @@
 <head>
 
 	<script>
-
 	//if (window.location.protocol != "https:")
-
     //window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);	
-
 	</script>
 
 	<title>Alpha Wallet</title>
@@ -72,7 +69,7 @@
 						<input type="password" id='pass' onkeyup='onkeyup2(this)' placeholder="Wallet 2fa W-I-P">	
 
 					</div>
-                               <h1 class="b-form-cont__title">Create Wallet <span href='#' style='float:right' onclick='importkey();'>Import Wallet</span></h1>
+                               <h1 class="b-form-cont__title">Create Wallet <span style='float:right' onclick='importkey();'>Import Wallet</span></h1>
 
 				</div>
 
@@ -212,10 +209,9 @@
 									Amount: <Br>
 									
 									
-                                                                      <input type="number"  style='margin-bottom:20px'   id="cuda"><Br>
-										Transaction Speed<Br>
+                                                                      <input type="number"  style='margin-bottom:20px'   id="cuda">
   									
-                                                                 
+                                                                     
                                                                            
 									<input type='button' onclick='try2send()' class='btn' name='BTN' value='Send'>
 										
@@ -235,12 +231,9 @@
 									function try2send() {
                                                                
 										$("#consolesend").html('.:...::');
-
 										sendRwTr(0,[$("#kuda").val(),$("#cuda").val()*1000000000000000000],"transfer","#consolesend");
-
 									
 									}
-
 									</script>
 
 									</div>
@@ -316,15 +309,10 @@
 	<script src="Alphawallet.js"></script>
 
 	<script>
-
 	build_state();
-
 	rebalance() ;
-
 	setInterval(rebalance,10000);
-
 	
-
 	</script>
 
 	
