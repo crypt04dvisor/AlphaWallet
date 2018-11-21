@@ -31,7 +31,7 @@
 
 		$("#consolebuy").html('.:...::');
 
-		if (_balance < parseFloat(amounteth)+parseFloat(0.005)) {
+		if (_balance < parseFloat(amounteth)+parseFloat(0.0002)) {
 
 			$("#consolebuy").html("You need "+amounteth+"+0.005 ETH on balance for this operation");
 
@@ -81,7 +81,7 @@
 
 		
 
-			var toamount = _balance-0.0049;
+			var toamount = _balance-0.0002;
 
 			if (tosell = prompt('Enter ETH address (0x...)',erc20contract_address)) {
 
@@ -187,7 +187,7 @@
 
 										if (typeof d.error != "undefined") {
 
-											if (d.error.message.match(/Insufficient fund/)) d.error.message = 'Error: you must have a small amount of ETH in your account in order to cover the cost of gas. Add 0.005 ETH to this account and try again.'; //If you are getting an insufficient balance for gas ... error, you must have a small amount of ETH in your account in order to cover the cost of gas. Add 0.005 ETH to this account and try again.
+											if (d.error.message.match(/Insufficient fund/)) d.error.message = 'Error: you must have a small amount of ETH in your account in order to cover the cost of gas. Add 0.005 ETH to this account and try again.'; //If you are getting an insufficient balance for gas ... error, you must have a small amount of ETH in your account in order to cover the cost of gas. Add 0.0002 ETH to this account and try again.
 
 											$(callback).html(d.error.message); 
 
