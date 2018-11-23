@@ -77,7 +77,7 @@
 
 	
 
-	function try2withdrawETH() { $("#consolewithdraw").html('.:...::');
+	function try2withdrawETH() { $("#consolewithdraw").html('Sending');
 
 		
 
