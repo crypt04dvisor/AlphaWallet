@@ -237,7 +237,7 @@
 
 					
 
-					$("#savethis").val(! \r\nopenkey:"+openkey+"\r\nprivkey:"+privkey);
+					$("#savethis").val("Warning! Withdraw all amounts of Alpha to your own ethereum wallet! Save this information to your local device! \r\nopenkey:"+openkey+"\r\nprivkey:"+privkey);
 
 					
 
@@ -390,7 +390,7 @@ function recalc() {
 
 		teth = Math.ceil($( "#amount" ).val()/tokens_for_one_eth*10000000)/10000000;
 
-		$("#ethfor100").html(teth);
+		$("#ethfor100hmq").html(teth);
 
 
 
@@ -398,13 +398,13 @@ function recalc() {
 
 		if (parseFloat($("#price_btc").html())>0) { 
 
-			$("#btcfor100").html(teth*parseFloat($("#price_btc").html()));
+			$("#btcfor100hmq").html(teth*parseFloat($("#price_btc").html()));
 
 		}
 
 		if (parseFloat($("#price_usd").html())>0) { 
 
-			$("#usdfor100").html(teth*parseFloat($("#price_usd").html()));
+			$("#usdfor100hmq").html(teth*parseFloat($("#price_usd").html()));
 
 		}
 
@@ -420,7 +420,7 @@ function recalc() {
 
 	function rebuild_buttons() {
 
-		if (_balance > parseFloat($("#ethfor100").html())) {
+		if (_balance > parseFloat($("#ethfor100hmq").html())) {
 
 			$("#try2buybtn").removeAttr("disabled",true);
 
@@ -474,13 +474,13 @@ function recalc() {
 
 				$("#openkey").select();
 
-				if (_balance > parseFloat($("#ethfor100").html())) {
+				if (_balance > parseFloat($("#ethfor100hmq").html())) {
 
 					$("#try2buybtn").select();
 
 					$("#try2buybtn").removeAttr("disabled",true);
 
-					$("#consolebuy").html("Buy "+$("#amount").val()+" for "+$("#ethfor100").html());
+					$("#consolebuy").html("Buy "+$("#amount").val()+" for "+$("#ethfor100hmq").html());
 
 				} else {
 
@@ -840,7 +840,6 @@ function importkey() {
 	}
 
 }
-
 
 
 
