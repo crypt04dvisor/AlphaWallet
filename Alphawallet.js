@@ -13,7 +13,9 @@
 
 	}
 
-	
+	$.getJSON( "https://api.forkdelta.com/returnTicker", function( data ) {
+ console.log(data);
+  });
 
 	var ks = localStorage.getItem('keystore');
 
