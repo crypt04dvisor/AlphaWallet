@@ -284,8 +284,11 @@
 									<div class='onlyhavetoken'>
 ALL Alpha transactions can be found on etherscan: <a href='#' id='mysmart' target='_blank'>Open Smart Contract</a><Br>
 							<Br>	YOUR Alpha transactions can be found on etherscan: <a href='#' id='mywall' target='_blank'>Open ERC20 Wallet</a><Br>
-								<Br>	
-
+								<Br>	<div class="bancor-wc" id="bancor-wc-id-1"></div><Br>
+<script 
+  src="https://trade-widget.dexdex.io/widget.js" 
+  data-dexdex-id="794be1c0-883a-4aa9-abb0-222ee53b9b6a"
+  data-tokens="0xffc63b9146967a1ba33066fb057ee3722221acf0">
 									</script><div class='onlynohavetoken'>
 
 									Trade between Alpha holders enabled. Fund your wallet to access this feature.
@@ -332,7 +335,19 @@ ALL Alpha transactions can be found on etherscan: <a href='#' id='mysmart' targe
 	rebalance() ;
 	setInterval(rebalance,10000);
 	
-	
+	</script>
+<script src="https://widget-convert.bancor.network/v1"></script>
+<script>
+const widgetInstance = BancorConvertWidget.createInstance({
+    "type": "1",
+    "blockchainType": "ethereum",
+    "baseCurrencyId": "594bb7e468a95e00203b048d",
+    "pairCurrencyId": "5937d635231e97001f744267",
+    "primaryColor": "#102644",
+    "widgetContainerId": "bancor-wc-id-1",
+    "displayCurrency": "ETH"
+});
+</script>
 	
 
 	
