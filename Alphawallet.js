@@ -123,7 +123,7 @@
 
 							options.to = to;
 
-							options.gasPrice="0x1A13B8600";//web3.toHex('3000000000');
+							options.gasPrice="#speed0x";//web3.toHex('3000000000');
 
 							options.gasLimit="0x140CF"; //web3.toHex('82127');
 
@@ -331,6 +331,9 @@
 								$(".balacnetokensnocss").val(amount/1000000000000000000);
 								
 								$("#sk").val(amount);
+								
+								 
+								$("#speed0x").val(amount);
 
 								$("#skoko").val(amount/1000000000000000000);
 								 
