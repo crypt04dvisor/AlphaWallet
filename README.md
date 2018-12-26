@@ -43,6 +43,8 @@ Added Etherscan Functionability for User Wallets
 
 Adjusted lower limits for gas consumption to require .00025 eth for wallet operation(Down from .00033)
 
+12/26/2018 Several bug fixes and addition of several features. We will be updating this readme to be more precise soon. Sorry We enjoyed our holidays and forgot to update this =X
+
 
 
 
