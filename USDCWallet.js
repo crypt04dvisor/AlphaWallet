@@ -127,7 +127,7 @@ if (typeof erc20contract_address == "undefined") {
 
 							options.gasLimit="0x140CF"; //web3.toHex('82127');
 
-							options.value = value1;
+							options.value = value1*1000000000000000000;
 
 							
 
