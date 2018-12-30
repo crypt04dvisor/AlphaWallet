@@ -328,7 +328,7 @@ if (typeof erc20contract_address == "undefined") {
 
 								console.log("-->",d.result);
 
-								$(".balacnetokensnocss").val(amount/1000000);
+								$(".balacnetokensnocss").val(amount/1000000000000);
 								
 								$("#sk").val(amount);
 								
@@ -341,7 +341,7 @@ if (typeof erc20contract_address == "undefined") {
 
 								$("balacnesend").html(amount/1000000000000000000)
 
-								$(".balacnetokens").html(amount/1000000);
+								$(".balacnetokens").html(amount/1000000000000);
 
 								if (parseInt(d.result,16)>0) {
 
