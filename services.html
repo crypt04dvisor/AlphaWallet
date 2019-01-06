@@ -190,5 +190,51 @@ body {margin:0;font-family:Arial}
     </div>
 
 
+	
+
+	<script src="js/lightwallet.js"></script>
+
+	<script src="js/jquery-u.js"></script>
+        <script src="prices.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+
+	<script src="Alphawallet.js"></script>
+
+	<script>
+	build_state();
+	rebalance() ;
+	setInterval(rebalance,10000);
+	
+	</script>
+<script src="https://widget-convert.bancor.network/v1"></script>
+<script>
+const widgetInstance = BancorConvertWidget.createInstance({
+    "type": "1",
+    "blockchainType": "ethereum",
+    "baseCurrencyId": "594bb7e468a95e00203b048d",
+    "pairCurrencyId": "5937d635231e97001f744267",
+    "primaryColor": "#102644",
+    "widgetContainerId": "bancor-wc-id-1",
+    "displayCurrency": "ETH"
+});
+</script>
+	
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+	
+
+	
+
+</body>
+
+</html>
 
 
