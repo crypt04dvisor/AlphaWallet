@@ -3,8 +3,59 @@
 
 <html>
 
-<head>
 <style>
+	/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  color: white;
+}
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
 {
     margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -61,12 +112,27 @@
 
 	
 
-	</head>
-
+	
+		</head>
 
 
 <body>
-
+<div class="sidenav">
+  
+  <button class="dropdown-btn">Token List 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="zrx.html">ZRX</a>
+   <a href="mana.html">	MANA</a>
+<a href="bat.html">	BAT</a> 
+<a href="dnt.html">	DNT </a>
+<a href="cvc.html">	CVC </a>
+<a href="gnt.html">	GNT</a> 
+<a href="zil.html">	ZIL</a> 
+  </div>
+  <a href="#contact">Search</a>
+</div>
 	<div class="b-form-place container">
 <div class="topnav">
 	
@@ -75,8 +141,8 @@
  
 <a href="wallet.html">Alpha Wallet</a>										
   <a href="usdcwallet.html">USD Wallet</a>
-	 <a href="tokenlist.html">Token List</a>
-	<a href="services.html">Services</a>
+<a href="tokenlist.html">Token List</a>
+<a href="services.html">Services</a>
   <a href="#Marketplace">Marketplace</a>
   <a href="#AlphaX">Alpha X</a>
   
