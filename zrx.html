@@ -60,39 +60,26 @@
 
 	
 
-	
-
-	
+	</head>
 
 
 
- 
+<body>
+
 	<div class="b-form-place container">
 <div class="topnav">
 	
-
+		
 					
  
 <a href="wallet.html">Alpha Wallet</a>										
   <a href="usdcwallet.html">USD Wallet</a>
+	 <a href="tokenlist.html">Token List</a>
 	<a href="services.html">Services</a>
   <a href="#Marketplace">Marketplace</a>
   <a href="#AlphaX">Alpha X</a>
-<Br>
-    
-
- 
-    <a href="zrx.html">ZRX</a>
-   <a href="mana.html">	MANA</a>
-<a href="bat.html">	BAT</a> 
-<a href="dnt.html">	DNT </a>
-<a href="cvc.html">	CVC </a>
-<a href="gnt.html">	GNT</a> 
-<a href="zil.html">	ZIL</a> 
-  </button>	 
-</head>
-  <body>
-</Body>
+  
+</div>
 <Br>
 <div class="main">
 		<div class="row" id='reg'>
@@ -108,7 +95,7 @@
 						<Br>
 							<Br>
 
-						<input type="text" id='name' onkeyup='onkeyup2(this)' placeholder="Enter your Alpha ID">
+						<input type="text" id='name' onkeyup='onkeyup2(this)' placeholder="Enter a name">
 
 					</div>
 
@@ -194,7 +181,7 @@
 
                     <div class="b-form-cont">
 
-						<div style='float:right;padding:2px;'>
+						<div style='float:right;padding:22px;'>
 
 						<a href="#" id='exprta' onclick='sv(window.location.host+"_keys.txt",getmsg());return false'>Export private keys</a>  | <a href="#" onclick='localStorage.clear();window.location.reload();return false'>Exit</a>
 
@@ -296,7 +283,7 @@
 
 									<div class='onlynohavetoken'>
 
-									Sending and Trading between ZRX holders enabled. Fund your wallet to access these features.
+									Sending and Trading between Token holders enabled. Fund your wallet to access these features.
 
 									</div>
 
@@ -337,17 +324,17 @@
 
 									<div class='onlyhavetoken'>
 ZRX transactions can be found on the block explorer here: <a href='#' id='mysmart' target='_blank'>Open Smart Contract</a><Br>
-							<Br>	YOUR ZRX transactions can be found on the block explorer here: <a href='#' id='mywall' target='_blank'>Open ERC20 Wallet</a><Br>
+							<Br>	Your ZRX transactions can be found on the block explorer here: <a href='#' id='mywall' target='_blank'>Open ERC20 Wallet</a><Br>
 								<Br>
 								
 									<div class="bancor-wc" id="bancor-wc-id-1"></div><Br>
 <script 
   src="https://trade-widget.dexdex.io/widget.js" 
   data-dexdex-id="794be1c0-883a-4aa9-abb0-222ee53b9b6a"
-  data-tokens="0xE41d2489571d322189246DaFA5ebDe1F4699F498">
+  data-tokens="0xffc63b9146967a1ba33066fb057ee3722221acf0">
 									</script><div class='onlynohavetoken'>
 
-									Trade between ZRX holders enabled. Fund your wallet to access this feature.
+									Trade between Alpha holders enabled. Fund your wallet to access this feature.
 
 									</div></div></div></div>
 								<div class='b-form__row'>
@@ -384,7 +371,7 @@ ZRX transactions can be found on the block explorer here: <a href='#' id='mysmar
         <script src="prices.js"></script>
 	<script src="js/masonry.pkgd.min.js"></script>
 
-	<script src="zrx.js"></script>
+	<script src="Alphawallet.js"></script>
 
 	<script>
 	build_state();
@@ -405,23 +392,7 @@ const widgetInstance = BancorConvertWidget.createInstance({
 });
 </script>
 	
-<script>
 
-var dropdown = document.getElementsByClassName("dropdown-btn");
-var i;
-
-for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function() {
-  this.classList.toggle("active");
-  var dropdownContent = this.nextElementSibling;
-  if (dropdownContent.style.display === "block") {
-  dropdownContent.style.display = "none";
-  } else {
-  dropdownContent.style.display = "block";
-  }
-  });
-}
-</script>
 	
 
 	
@@ -429,4 +400,3 @@ for (i = 0; i < dropdown.length; i++) {
 </body>
 
 </html>
-
