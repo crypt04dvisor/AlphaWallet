@@ -1,199 +1,4 @@
-<!DOCTYPE html>
 
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {margin:0;font-family:Arial}
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-	<style>
-	/* Fixed sidenav, full height */
-.sidenav {
-  height: 100%;
-  width: 200px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-/* Style the sidenav links and the dropdown button */
-.sidenav a, .dropdown-btn {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #3E8FDF;
-  display: block;
-  border: none;
-  background: none;
-  width:100%;
-  text-align: left;
-  cursor: pointer;
-  outline: none;
-}
-/* On mouse-over */
-.sidenav a:hover, .dropdown-btn:hover {
-  color: #f1f1f1;
-}
-/* Main content */
-.main {
-  margin-left: 200px; /* Same as the width of the sidenav */
-  font-size: 20px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
-}
-/* Add an active class to the active dropdown button */
-/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
-.dropdown-container {
-  display: none;
-  background-color: #262626;
-  padding-left: 8px;
-}
-/* Optional: Style the caret down icon */
-.fa-caret-down {
-  float: right;
-  padding-right: 8px;
-}
-.topnav a {
-  float: left;
-  display: block;
-  color: #A5A5A5;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-.topnav .icon {
-  display: none;
-}
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-.dropdown .dropbtn {
-  font-size: 17px;    
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-.topnav a:hover, .dropdown:hover .dropbtn {
-  background-color: #555;
-  color: white;
-}
-.dropdown-content a:hover {
-  background-color: #ddd;
-  color: black;
-}
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child), .dropdown .dropbtn {
-    display: none;
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .topnav.responsive .dropdown {float: none;}
-  .topnav.responsive .dropdown-content {position: relative;}
-  .topnav.responsive .dropdown .dropbtn {
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
-}
-</style>
-	<div class="topnav" id="myTopnav">
-  <a href="wallet.html" class="active">Alpha Wallet</a>
-  <a href="usdcwallet.html">USDC Wallet</a>
-  <a href="services.html">Services</a>
-	<a href="aex.html">AlphaX</a>
-  <div class="dropdown">
-    <button class="dropbtn">Token List 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="zrx.html">ZRX</a>
-      <a href="zil.html">ZIL</a>
-      <a href="mana.html">MANA</a>
-    </div>
-	  </div>
-		</div>
-</head>
-<body>
-
-
-	<script>
-	//if (window.location.protocol != "https:")
-    //window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);	
-	</script>
-
-	<title>Alpha Wallet</title>
-
-	<meta charset="utf-8">
-
-	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
-
-	<meta name="description" content="AlphaWallet">
-
-	<meta name="keywords" content="Alpha">
-
-	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-    <link rel="stylesheet" href="css/dashboardred.css">
-
-	<link rel="stylesheet" href="css/jquery-u.css">
-
-	<script src="js/jquery.min.js"></script>
-
-	
-
-
-	
-
-
-
-
-	
 
 	<script src="js/lightwallet.js"></script>
 
@@ -211,22 +16,32 @@ body {margin:0;font-family:Arial}
 	</script>
 
 	
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
-	
 
-	
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>	
+<script>
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}	</script>
 
 </body>
 
 </html>
-
-
