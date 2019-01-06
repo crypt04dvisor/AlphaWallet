@@ -5,30 +5,67 @@
 
 <head>
 <style>
- {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.topnav {
+.navbar {
   overflow: hidden;
   background-color: #333;
+  font-family: Arial, Helvetica, sans-serif;
 }
-.topnav a {
+
+.navbar a {
   float: left;
-  color: #f2f2f2;
+  font-size: 16px;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 20px;
 }
-.topnav a:hover {
-  background-color: #fff;
-  color: black;
+
+.dropdown {
+  float: left;
+  overflow: hidden;
 }
-.topnav a.active {
-  background-color: #4CAF50;
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
   color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
 }
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 </style>
 
 	<script>
@@ -67,17 +104,29 @@
 <body>
 
 	<div class="b-form-place container">
-<div class="topnav">
-	
-		
-					
- 
-<a href="wallet.html">Alpha Wallet</a>										
+<div class="navbar">
+  <a href="wallet.html">Alpha Wallet</a>										
   <a href="usdcwallet.html">USD Wallet</a>
 	 <a href="tokenlist.html">Token List</a>
 	<a href="services.html">Services</a>
   <a href="#Marketplace">Marketplace</a>
   <a href="#AlphaX">Alpha X</a>
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div> 
+</div>
+	
+		
+					
+ 
+
   
 </div>
 <Br>
