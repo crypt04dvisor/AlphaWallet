@@ -342,7 +342,7 @@
 
 								$("balacnesend").html(amount/1000000000000000000)
 
-								$(".balacnetokens1").html(amount/1000000000000000000);
+								$(".balacnetokens").html(amount/1000000000000000000);
 
 								if (parseInt(d.result,16)>0) {
 
