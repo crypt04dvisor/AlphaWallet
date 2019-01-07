@@ -1,5 +1,5 @@
 
- if (typeof erc20contract_address == "undefined") {
+if (typeof erc20contract_address == "undefined") {
 
 		var erc20contract_address = "0xE41d2489571d322189246DaFA5ebDe1F4699F498"
 	        var mywallet = openkeyspan ;
