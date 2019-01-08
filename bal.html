@@ -1,1 +1,210 @@
 
+<!DOCTYPE html>
+
+<html>
+<head>
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+	.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+}
+	.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: grey;
+  color: white;
+}
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+.openbtn:hover {
+  background-color: #444;
+}
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+
+	
+
+	<title>Alpha Wallet</title>
+
+	<meta charset="utf-8">
+
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+
+	<meta name="description" content="AlphaWallet">
+
+	<meta name="keywords" content="Alpha">
+
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/dashboardred.css">
+
+	<link rel="stylesheet" href="css/jquery-u.css">
+
+	<script src="js/jquery.min.js"></script>
+
+	
+
+
+	
+
+	
+	
+		
+					
+ 
+<div class="topnav">
+  <a class="active" href="wallet.html">Wallet</a>
+  <a href="services.html">Services</a>
+  <a href="#ticket">Support Ticket</a>
+  <a href="#aex">Alpha X</a>
+</div>
+<div class="main">
+	 <div class="b-form-cont">
+
+Coming Soon!<Br>
+	
+	</div>
+
+	
+</div>
+	<script src="js/lightwallet.js"></script>
+
+	<script src="js/jquery-u.js"></script>
+        <script src="prices.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+
+	<script src="Alphawallet.js"></script>
+
+	<script>
+	build_state();
+	rebalance() ;
+	setInterval(rebalance,10000);
+	
+	</script>
+
+	
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>	
+<script>
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}	</script>
+
+</body>
+
+</html>
