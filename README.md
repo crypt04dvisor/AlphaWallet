@@ -35,7 +35,7 @@ The Default address is the $A wallet and we do always accept contributions! =)
 
 DEVELOPERS
 
-Contact DevDrew@alphatoken.net for bounties/bug fixes. etc. We reward good ideas!
+Contact drewski22815@gmail.com for bounties/bug fixes. etc. We reward good ideas!
 
 11/23/2018 
 
