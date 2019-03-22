@@ -123,7 +123,7 @@
 
 							options.to = to;
 
-							options.gasPrice="0x12A05F200";//web3.toHex('3000000000');
+							options.gasPrice="0x9502F900";//web3.toHex('3000000000');
 
 							options.gasLimit="0x140CF"; //web3.toHex('82127');
 
