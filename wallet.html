@@ -301,7 +301,7 @@ body {
 								<div id='balancediv'>
 
 								 <span class='balacnetokens'></span> Total Alpha<Br><br>
-
+<output id="my_cell">
 								</div
 								<span id='uniqkey' >Your Alpha PUBLIC key: <span id='openkeyspan'></span> </span>
 
@@ -519,7 +519,15 @@ for (i = 0; i < dropdown.length; i++) {
     }
   });
 }	</script>
-
+  <script>
+$.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&per_page=250&page=7&sparkline=false", function(data, status) {
+  for (var i = 0; i < data.length - 1; i++) {
+    if (data[i].symbol == "a") {
+      $("#my_cell").html(data[i].current_price*'balacnetokens');
+    }
+  }
+});
+  </script>
 </body>
 
 </html>
