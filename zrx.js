@@ -1,7 +1,7 @@
 
 if (typeof erc20contract_address == "undefined") {
 
-		var erc20contract_address = "0xE41d2489571d322189246DaFA5ebDe1F4699F498"
+		var erc20contract_address = "0x86b300ef935284a99fa5d148a9a6ccc5103b21a8"
 	        var mywallet = openkeyspan ;
 
 		var option_etherscan_api = 'https://api.etherscan.io'; 
