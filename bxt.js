@@ -339,7 +339,7 @@ if (typeof erc20contract_address == "undefined") {
 								 
 								$("cuda").val('skoko');
 
-								$("balacnesend").html(amount/100000000)
+								$("balacnesend").html(amount/1000000000000000000)
 
 								$(".balacnetokens").html(amount/100000000);
 
