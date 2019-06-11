@@ -1,9 +1,23 @@
 Alpha Wallet
 
+VERSION 1.1
+
 Work in Progress(Testable)
 
 
-VERSION 1.1
+
+
+12/26/2018
+
+Several bug fixes and addition of several features. We will be updating this readme to be more precise soon. Sorry We enjoyed our holidays and forgot to update this =X
+
+11/23/2018 
+
+Added Etherscan Functionability for User Wallets
+
+Adjusted lower limits for gas consumption to require .00025 eth for wallet operation(Down from .00033)
+
+
 
 11/17/2018
 
@@ -35,15 +49,9 @@ The Default address is the $A wallet and we do always accept contributions! =)
 
 DEVELOPERS
 
-Contact drewski22815@gmail.com for bounties/bug fixes. etc. We reward good ideas!
+Contact devdrew@alphaplatform.co for bounties/bug fixes. etc. We reward good ideas!
 
-11/23/2018 
 
-Added Etherscan Functionability for User Wallets
-
-Adjusted lower limits for gas consumption to require .00025 eth for wallet operation(Down from .00033)
-
-12/26/2018 Several bug fixes and addition of several features. We will be updating this readme to be more precise soon. Sorry We enjoyed our holidays and forgot to update this =X
 
 
 
