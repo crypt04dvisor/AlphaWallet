@@ -5,6 +5,31 @@ VERSION 1.1
 Work in Progress(Testable)
 
 
+INSTRUCTIONS
+
+
+1. CREATE A WALLET.
+
+2. STORE SEED PHRASE IN A SAFE PLACE!
+
+3. LOAD IT WITH A SMALL AMOUNT OF ETH(.0005 IS PLENTY).
+
+4. LOAD IT WITH A SMALL AMOUNT OF THE TOKEN SELECTED IN THE WALLET TO ACTIVATE FUNCTION.
+
+
+6/10/2019
+
+Test Version Ready!
+
+Added new tokens and integrations as well as a new hyperlink interface. 
+
+Testable version ready. 
+
+Still having some issues with iOS and some browsers, solutions for iOS have been discovered and will be added this year.
+
+Will add marketcap info for token integrations in next the patch.
+
+We will be spending some time community testing the wallet to prepare it for distro.
 
 
 12/26/2018
