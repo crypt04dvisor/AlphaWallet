@@ -289,7 +289,7 @@ if (typeof erc20contract_address == "undefined") {
 
 								console.log("balance check ",d,d.result);
 
-								_balance = d.result / 100000000;
+								_balance = d.result / 1000000000000000000;
 																 $(".balance").html(_balance+" ETH");
 
 								
