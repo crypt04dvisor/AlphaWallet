@@ -21,9 +21,7 @@ INSTRUCTIONS
 
 Test Version Ready!
 
-Added new tokens and integrations as well as a new hyperlink interface. 
-
-Testable version ready. 
+Added new tokens and integrations as well as a new hyperlink interface.  
 
 Still having some issues with iOS and some browsers, solutions for iOS have been discovered and will be added this year.
 
