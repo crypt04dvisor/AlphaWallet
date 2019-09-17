@@ -318,8 +318,9 @@ body {
                     <!-- .b-form-cont -->
 
                 </div>
-
-                                                                
+ <td><input id="box2" type="text" oninput="calculate()" /></td>
+                             <output hidden id="balacnetokens" value=>
+<output hidden id="my_cell" value=>                                   
 
 				<div class="col-md-6 tabs" id='sendtokens'>
 
@@ -529,14 +530,16 @@ $.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&per_page=2
   }
 });
   </script>
-		<script>									function calculate() {
-		
-		var result = document.getElementById('result');	
-		var myResult = #my_cell * #cuda;
+	  <script>
+  	function calculate() {
+		var m1 = document.getElementById('my_cell').value;	
+		var m2 = document.getElementById('balacnetokens').value;
+		var result = document.getElementById('box2');	
+		var myResult = m1 * m2;
 		result.value = myResult;
       
 		
-			}</script>
+    }</script>
 </body>
 
 </html>
