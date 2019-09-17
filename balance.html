@@ -297,7 +297,7 @@ body {
 								 <span class='balacnetokens'></span> Total Alpha<Br><br>
 									
 									</div>
-									Worth $ <output id="my_cell"*"balacnetokens"> USD
+									Worth $ <output id="result"> USD
 								<span id='uniqkey' >Your Alpha PUBLIC key: <span id='openkeyspan'></span> </span>
 
 								 <div id='balacnetokens'>
@@ -529,6 +529,15 @@ $.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&per_page=2
   }
 });
   </script>
+											function calculate() {
+		var myBox1 = document.getElementById('balacnetokens').value;	
+		var myBox2 = document.getElementById('my_cell').value;
+		var result = document.getElementById('result');	
+		var myResult = myBox1 * myBox2;
+		result.value = myResult;
+      
+		
+	}
 </body>
 
 </html>
