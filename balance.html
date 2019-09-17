@@ -515,7 +515,7 @@ for (i = 0; i < dropdown.length; i++) {
 $.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&per_page=250&page=7&sparkline=false", function(data, status) {
   for (var i = 0; i < data.length - 1; i++) {
     if (data[i].symbol == "a") {
-      $("#my_cell").html(data[i].current_price*'balacnetokens');
+      $("#my_cell").html(data[i].current_price);
     }
   }
 });
