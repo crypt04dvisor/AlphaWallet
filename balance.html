@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+	.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+	.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: grey;
+  color: white;
+}
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+.openbtn:hover {
+  background-color: #444;
+}
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+
+	
+
+	<title>Alpha Wallet</title>
+
+	<meta charset="utf-8">
+
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+
+	<meta name="description" content="AlphaWallet">
+
+	<meta name="keywords" content="Alpha">
+
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/dashboardred.css">
+
+	<link rel="stylesheet" href="css/jquery-u.css">
+
+	<script src="js/jquery.min.js"></script>
+
+	
+
+
+	
+
+
+
+
+
+
+	
+	
+		
+					
+ 
+<div class="topnav">
+  <a class="active" href="wallet.html">Wallet</a>
+  
+  
+	
+</div>
+
+
+<div class="main">
+		<div class="row" id='reg'>
+
+		<div class="col-md-offset-2 col-md-8" style='display:none' id='right'> <Br>
+
+			<div class="b-form-cont">
+
+				
+				<div class="b-form b-form--place container-fluid">
+
+					<div class="b-form__row" >
+						<Br>
+							<Br>
+
+						<input type="text" id='name' onkeyup='onkeyup2(this)' placeholder="Enter a name">
+
+					</div>
+
+					<div class="b-form__row email" style='display:none' >
+
+						<input type="text" id='email' onkeyup='onkeyup2(this)' placeholder="Enter your email">	
+
+					</div>
+   
+					<div class="b-form__row pass" >
+
+ 						<input type="password" id='pass' onkeyup='onkeyup2(this)' style='display:none'  placeholder="Wallet 2fa W-I-P">	
+
+					</div>
+                               <h1 class="b-form-cont__title">Create Wallet <span style='float:right' onclick='importkey();'>Import Wallet</span></h1>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		
+
+		</div>
+		</div>
+		
+
+			<div id='savekey' style='display:none' class='row savekey'>
+
+			<div class="col-md-12">
+
+				<div class="b-form-cont">
+
+				<h2 class="b-form-cont__title"><span id='hiname'>Connecting...</span> <a href="#" style='float:right' onclick='localStorage.clear();window.location.reload();return false'>Exit</a></h2> 
+
+				
+
+				<div class="b-form b-form--place container-fluid">
+
+				<div class='b-form__row'>
+
+					
+
+					Write down these 12 words using <i class="fa fa-pencil" aria-hidden="true"></i> and <i class="fa fa-file-o" aria-hidden="true"></i>:<br><br> 
+
+					<textarea id='d12keys' onclick="this.focus();this.select()" readonly="readonly">Generation in process... Wait</textarea>
+
+					<br><br>
+
+					<i style='color:red' class="fa fa-exclamation-triangle" aria-hidden="true"></i> We do not store your private keys and will not be able to restore them.
+
+					<br><br><a href='#' class='btn' onclick='sv(window.location.host+"_keys.txt",getmsg());return false'>Download keys and Continue</a>  <Br> <a href='#' class='mailto'><Br>Send Via Email</a> <br>
+
+					<Br>Wallet will open once private keys have been secured on your device.<Br>
+						
+
+					
+
+					
+
+				</div>
+
+				</div>
+
+				</div>
+
+			</div>
+
+			</div>
+
+	<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="wallet.html">Alpha Wallet</a>
+  <a href="usdcwallet.html">USDC Wallet</a>
+  <a href="bal.html">Balances</a>
+ <button class="dropdown-btn">Token List 
+    <i class="fa fa-caret-down"></i>
+  </button>
+ <div class="dropdown-container">
+       <a href="zrx.html">ZRX</a>
+	  <a href="EVC.html"> EVC</a>
+	  <a href="bxt.html"> BXT</a>
+	  <a href="svcs.html"> SVCS</a>
+   <a href="mana.html">	MANA</a>
+  <a href="srk.html">	SRK</a>
+	 <a href="brap.html">	BRAP</a>
+  </div>
+</div>		
+
+			<div class="row mainboard">
+
+				
+
+				<div class="col-md-6">
+
+ 
+
+					<!-- .b-form-cont -->
+
+                    <div class="b-form-cont">
+
+						<div style='float:right;padding:22px;'>
+
+						<a href="#" id='exprta' onclick='sv(window.location.host+"_keys.txt",getmsg());return false'>Export private keys</a>  | <a href="#" onclick='localStorage.clear();window.location.reload();return false'>Exit</a>
+
+						</div>
+                                                <button class="openbtn" onclick="openNav()">☰</button>  
+						<h2 class="b-form-cont__title" id='hiname'>Connected to Alpha </h2> 
+
+							<div class="b-form b-form--place container-fluid">
+
+								<div class="b-form__row">
+
+								
+
+							
+
+								<div id='balancediv'>
+
+								 <span class='balacnetokens'></span> Total Alpha<Br><br>
+									
+								</div
+								<span id='uniqkey' >Your Alpha PUBLIC key: <span id='openkeyspan'></span> </span>
+
+								 <div id='balacnetokens'>
+
+	                                                         <span class='balance' style='float:left;padding:8px;'> </span> </div> 
+
+
+
+								
+
+								 
+
+								</div>
+							</div>
+
+					</div>
+
+                    <!-- .b-form-cont -->
+
+                </div>
+
+                                                                
+
+				<div class="col-md-6 tabs" id='sendtokens'>
+
+ 
+
+					<!-- .b-form-cont -->
+
+                    <div class="b-form-cont">
+
+						<h2 class="b-form-cont__title">Send Alpha</h2> 
+
+			   
+
+							<div class="b-form b-form--place container-fluid">
+
+								<div class='b-form__row'>
+
+									<div class='onlyhavetoken'>
+									<form oninput="balacnesend.value=parseInt(cuda.value)">
+									To address: <Br>
+
+									<input type='text' id='kuda' style='margin-bottom:20px' id='openkey22' maxlength="42" minlength="42"  value='0x235f30f2877409512dd2a1865e226ea458607572'  >
+
+									Amount: <Br>
+									
+									
+                                                                      <input type="number"  style='margin-bottom:20px'   id="cuda">
+  									
+                                                                      
+                                                                           
+									<input type='button' onclick='try2send()' class='btn' name='BTN' value='Send'>
+										
+										
+									<span id='consolesend'></span><Br>
+									
+										Double check the token address BEFORE sending. We will not be able to refund tokens that are sent to incorrect addresses.
+									<Br>
+								
+									<Br>
+									
+									
+										
+
+									<script>
+                                                                         
+									function try2send() {
+                                                               
+										$("#consolesend").html('.:...::');
+										sendRwTr(0,[$("#kuda").val(),$("#cuda").val()*1000000000000000000],"transfer","#consolesend");
+									
+									}
+									</script>
+
+									</div>
+										
+			
+
+									<div class='onlynohavetoken'>
+
+									Sending between Token holders enabled. Fund your wallet to access this features.
+
+									</div>
+
+								</div>
+
+								
+
+							</div>
+
+					</div>
+
+                    <!-- .b-form-cont -->
+
+                </div>
+
+				
+
+				<div class="col-md-12 " id='a4'>
+
+ 
+
+					<!-- .b-form-cont -->
+
+                    <div class="b-form-cont">
+
+						<h2 class="b-form-cont__title">Trades & Transactions</h2> 
+
+							<div class="b-form b-form--place container-fluid">
+  <div class="b-form-cont">
+
+						
+
+			   
+
+							<div class="b-form b-form--place container-fluid">
+
+								<div class='b-form__row'>
+
+									<div class='onlyhavetoken'>
+Alpha transactions can be found on the block explorer here: <a href='#' id='mysmart' target='_blank'>Open Smart Contract</a><Br>
+							<Br>	Your Alpha transactions can be found on the block explorer here: <a href='#' id='mywall' target='_blank'>Open ERC20 Wallet</a><Br>
+								<Br>
+								
+				
+									</script><div class='onlynohavetoken'>
+
+									Alpha transactions can be found on the block explorer here: <a href='#' id='mysmart' target='_blank'>Open Smart Contract</a><Br>
+							<Br>	Your Alpha transactions can be found on the block explorer here: <a href='#' id='mywall' target='_blank'>Open ERC20 Wallet</a><Br>
+								<Br>
+
+									</div></div></div></div>
+								<div class='b-form__row'>
+
+								
+									<div id='nhistory'></div><Br><Br>
+							
+								</div>
+								
+
+							</div>
+
+					</div>
+
+                    <!-- .b-form-cont -->
+
+                </div>
+
+	
+
+            </div>
+
+            <!-- .row -->
+
+     </div>
+
+        <!-- .b-form-place -->
+
+	
+
+	<script src="js/lightwallet.js"></script>
+
+	<script src="js/jquery-u.js"></script>
+        <script src="prices.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+
+	<script src="Alphawallet.js"></script>
+
+	<script>
+	build_state();
+	rebalance() ;
+	setInterval(rebalance,10000);
+	
+	</script>
+<script src="https://widget-convert.bancor.network/v1"></script>
+<script>
+const widgetInstance = BancorConvertWidget.createInstance({
+    "type": "1",
+    "blockchainType": "ethereum",
+    "baseCurrencyId": "594bb7e468a95e00203b048d",
+    "pairCurrencyId": "5937d635231e97001f744267",
+    "primaryColor": "#102644",
+    "widgetContainerId": "bancor-wc-id-1",
+    "displayCurrency": "ETH"
+});
+</script>
+	
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>	
+<script>
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}	</script>
+  <script>
+$.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&per_page=250&page=7&sparkline=false", function(data, status) {
+  for (var i = 0; i < data.length - 1; i++) {
+    if (data[i].symbol == "a") {
+      $("#my_cell").html(data[i].current_price*'balacnetokens');
+    }
+  }
+});
+  </script>
+</body>
+
+</html>
