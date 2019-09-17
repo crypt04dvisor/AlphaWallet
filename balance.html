@@ -293,7 +293,9 @@ body {
 							
 
 								<div id='balancediv'>
-
+<output id="my_cell" value=>
+	<output id="balacnetokens" value=>
+		   <td><input id="result" /></td>
 								 <span class='balacnetokens'></span> Total Alpha<Br><br>
 									
 								</div
@@ -519,6 +521,16 @@ $.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&per_page=2
   }
 });
   </script>
+										 <script>
+  	function calculate() {
+		var m1 = document.getElementById('my_cell').value;	
+		var m2 = document.getElementById('my_cell').value;
+		var result = document.getElementById('result');	
+		var myResult = m1 * m2;
+		result.value = myResult;
+      
+		
+    }</script>
 </body>
 
 </html>
