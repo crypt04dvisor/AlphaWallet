@@ -136,7 +136,7 @@ body {
 
 	<script src="js/jquery.min.js"></script>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	
 
 
 	
@@ -296,8 +296,7 @@ body {
 
 								 <span class='balacnetokens'></span> Total Alpha<Br><br>
 									
-									</div>
-									Worth $ <output id="result"> USD
+								</div
 								<span id='uniqkey' >Your Alpha PUBLIC key: <span id='openkeyspan'></span> </span>
 
 								 <div id='balacnetokens'>
@@ -318,9 +317,8 @@ body {
                     <!-- .b-form-cont -->
 
                 </div>
- <td><input id="box2" type="text" oninput="calculate()" /></td>
-                             <output hidden id="balacnetokens" value=>
-<output hidden id="my_cell" value=>                                   
+
+                                                                
 
 				<div class="col-md-6 tabs" id='sendtokens'>
 
@@ -521,25 +519,6 @@ $.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&per_page=2
   }
 });
   </script>
-										<script>
-$.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&per_page=250&page=4&sparkline=false", function(data, status) {
-  for (var i = 0; i < data.length - 1; i++) {
-    if (data[i].symbol == "a") {
-      $("#my_cell").html(data[i].current_price);
-    }
-  }
-});
-  </script>
-	  <script>
-  	function calculate() {
-		var m1 = document.getElementById('my_cell').value;	
-		var m2 = document.getElementById('balacnetokens').value;
-		var result = document.getElementById('box2');	
-		var myResult = m1 * m2;
-		result.value = myResult;
-      
-		
-    }</script>
 </body>
 
 </html>
