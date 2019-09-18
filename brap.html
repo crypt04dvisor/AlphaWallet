@@ -509,7 +509,33 @@ for (i = 0; i < dropdown.length; i++) {
     }
   });
 }	</script>
-
+<script type="text/javascript">
+ function validate(evt) {
+   var theEvent = evt || window.event;
+   var key = theEvent.keyCode || theEvent.which;
+   key = String.fromCharCode(key);
+  var regex = /[]|\./;
+   if(!regex.test(key)) {
+    theEvent.returnValue = false;
+    if(theEvent.preventDefault) theEvent.preventDefault();
+  }
+ }
+ </script>
+													      <script type="text/javascript">
+    function preventBackspace(e) {
+        var evt = e || window.event;
+        if (evt) {
+            var keyCode = evt.charCode || evt.keyCode;
+            if (keyCode === 8) {
+                if (evt.preventDefault) {
+                    evt.preventDefault();
+                } else {
+                    evt.returnValue = false;
+                }
+            }
+        }
+    }
+</script>
 </body>
 
 </html>
