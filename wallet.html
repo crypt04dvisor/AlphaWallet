@@ -350,8 +350,8 @@ body {
 									Amount: <Br>
 									
 									
-                                                                      <input type="number"  style='margin-bottom:20px'   id="cuda">
-  									
+                                                                      <input type="number"  style='margin-bottom:20px'   id="cuda">Total Value:<Br>
+  									<input type="number"  style='margin-bottom:20px'   id="result">
                                                                       
                                                                            
 									<input type='button' onclick='try2send()' class='btn' name='BTN' value='Send'>
@@ -539,6 +539,16 @@ $.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&per_page=2
         }
     }
 </script>
+										<script>function calculate() {
+		var m1 = document.getElementById('my_cell').value;	
+		var m2 = document.getElementById('cuda').value;
+		var result = document.getElementById('result');	
+		var myResult = m1 * m2;
+		result.value = myResult;
+      
+		
+											}
+										</script>
 </body>
 
 </html>
