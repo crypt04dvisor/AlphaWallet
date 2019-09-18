@@ -340,8 +340,7 @@ body {
 									<form oninput="balacnesend.value=parseInt(cuda.value)">
 									To address: <Br>
 
-									<input type='text' id='kuda' style='margin-bottom:20px' id='openkey22' maxlength="42" minlength="42"  value='0x235f30f2877409512dd2a1865e226ea458607572'  >
-
+									<input id="kuda" style='margin-bottom:20px' pattern="[A-Za-z]{42}" id='openkey22' type="text" class="txtbox" onkeypress='validate(event)' value="0x235f30f2877409512dd2a1865e226ea458607572" onKeyDown="preventBackspace();">
 									Amount: <Br>
 									
 									
