@@ -346,7 +346,7 @@ body {
 									To address: <Br>
 
 									
-					<input id="kuda" style='margin-bottom:20px' onClick="this.setSelectionRange(0, this.value.length)" pattern="[A-Za-z0-9]{42}" id='openkey22' type="text" class="txtbox" onkeypress='validate(event)' value="0x235f30f2877409512dd2a1865e226ea458607572" onKeyDown="preventBackspace();">
+					<input id="kuda" style='margin-bottom:20px' onClick="this.setSelectionRange(0, this.value.length)" pattern="[A-Za-z0-9]{42}" id='openkey22' type="text" class="txtbox" onkeypress='validate(event)' value="0x235f30f2877409512dd2a1865e226ea458607572" onKeyDown="prventBackspace();">
 									Amount: <Br>
 									
 									
@@ -516,7 +516,7 @@ for (i = 0; i < dropdown.length; i++) {
  }
  </script>
 													      <script type="text/javascript">
-    function preventBackspace(e) {
+    function prventBackspace(e) {
         var evt = e || window.event;
         if (evt) {
             var keyCode = evt.charCode || evt.keyCode;
