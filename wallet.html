@@ -118,6 +118,16 @@ body {
   .sidebar a {font-size: 18px;}
 }
 </style>
+	<script language="javascript" type="text/javascript">
+function limitText(limitField, limitNum) {
+    if (limitField.value.length > limitNum) {
+        limitField.value = limitField.value.substring(0, limitNum);
+    }
+}
+</script>
+
+    <input type="text" id="sessionNo" name="sessionNum" onKeyDown="limitText(this,42);" 
+onKeyUp="limitText(this,42);"" />
 </head>
 <body>
 
@@ -346,7 +356,7 @@ body {
 									To address: <Br>
 
 									
-					<input id="kuda" style='margin-bottom:20px' onClick="this.setSelectionRange(0, this.value.length)" pattern="[A-Za-z0-9]{42}" id='openkey22' type="text" class="txtbox" onkeypress='validate(event)' value="0x235f30f2877409512dd2a1865e226ea458607572" onKeyDown="prventBackspace();">
+					<input id="kuda" id="sessionNo" name="sessionNum" maxlength="42" style='margin-bottom:20px' onClick="this.setSelectionRange(0, this.value.length)" pattern="[A-Za-z0-9]{42}" id='openkey22' type="text" class="txtbox" onkeypress='validate(event)' value="0x235f30f2877409512dd2a1865e226ea458607572" onKeyDown="prventBackspace();"onkeypress="return isNumberKey(event)" >
 									Amount: <Br>
 									
 									
