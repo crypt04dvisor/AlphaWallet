@@ -134,6 +134,19 @@ function Minimum(obj,min){
 }
 // ]]>
 </script>
+	<script>
+		$(window).load(function () {
+    $(".trigger_popup_fricc").click(function(){
+       $('.hover_bkgr_fricc').show();
+    });
+    $('.hover_bkgr_fricc').click(function(){
+        $('.hover_bkgr_fricc').hide();
+    });
+    $('.popupCloseButton').click(function(){
+        $('.hover_bkgr_fricc').hide();
+    });
+});
+	</script>
 </head>
 <body>
 
@@ -358,6 +371,7 @@ function Minimum(obj,min){
 								<div class='b-form__row'>
 
 									<div class='onlyhavetoken'>
+										
 							<form action="balacnesend.value=parseInt(cuda.value)">
 									To address: <Br>
 
@@ -368,8 +382,17 @@ function Minimum(obj,min){
 									
                                                                       <input type="number"  style='margin-bottom:20px'   id="cuda">
                                                                       
-                                                                           
-									<input type='button' onclick='try2send()' class='btn' name='BTN' value='Send'>
+                                                                         <a class="trigger_popup_fricc">Click here To send</a>
+
+<div class="hover_bkgr_fricc">
+    <span class="helper"></span>
+    <div>
+        <div class="popupCloseButton">X</div>
+        <input type='button' onclick='try2send()' class='btn' name='BTN' value='Send'>
+    </div>
+</div>
+  
+									
 										
 								</form>	
 									<span id='consolesend'></span><Br>
