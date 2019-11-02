@@ -118,26 +118,17 @@ body {
   .sidebar a {font-size: 18px;}
 }
 </style>
-	<script language="javascript" type="text/javascript">
-function limitText(limitField, limitNum) {
-    if (limitField.value.length > limitNum) {
-        limitField.value = limitField.value.substring(0, limitNum);
+
+function checkLength(){
+    var textbox = document.getElementById("textbox");
+    if(textbox.value.length <= 42 && textbox.value.length >= 42){
+        alert("success");
+    }
+    else{
+        alert("make sure the input is between 42 characters long")
     }
 }
-</script>
-
-    <input type="text" id="sessionNo" name="sessionNum" onKeyDown="limitText(this,42);" 
-onKeyUp="limitText(this,42);"" />
-			      <script language="javascript" type="text/javascript">
-function limitText(limitField, limitNum) {
-    if (limitField.value.length > limitNum) {
-        limitField.value = limitField.value.substring(0, limitNum);
-    }
-}
-</script>
-
-    <input type="text" id="sessionNo1" name="sessionNum1" onKeyDown="limitText(this,42);" 
-onKeyUp="limitText(this,42);"" />
+  </script>  
 </head>
 <body>
 
@@ -366,7 +357,7 @@ onKeyUp="limitText(this,42);"" />
 									To address: <Br>
 
 									
-					<input id="kuda" id="sessionNo1" name="sessionNum1" id="sessionNo" name="sessionNum" minlength="42" maxlength="42" style='margin-bottom:20px' onClick="this.setSelectionRange(0, this.value.length)" pattern="[A-Za-z0-9]{42}" id='openkey22' type="text" class="txtbox" onkeypress='validate(event)' value="0x235f30f2877409512dd2a1865e226ea458607572" onKeyDown="prventBackspace();"onkeypress="return isNumberKey(event)" >
+					<input id="kuda" id="textbox" id="sessionNo" name="sessionNum" minlength="42" maxlength="42" style='margin-bottom:20px' onClick="this.setSelectionRange(0, this.value.length)" pattern="[A-Za-z0-9]{42}" id='openkey22' type="text" class="txtbox" onkeypress='validate(event)' value="0x235f30f2877409512dd2a1865e226ea458607572" onKeyDown="prventBackspace();"onkeypress="return isNumberKey(event)" onclick="checkLength()">
 									Amount: <Br>
 									
 									
