@@ -381,11 +381,18 @@ function Minimum(obj,min){
 									
 									<script>
 
+<script>
 function conf() {
-  confirm("Are you sure?");
+  var txt;
+  var r = confirm("Press a button!");
+  if (r == true) {
+    try2send() ;
+  } else {
+    txt = "You pressed Cancel!";
+  }
+  
 }
- 
-}
+</script>
 </script>	
 
 									<script>
