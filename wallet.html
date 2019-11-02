@@ -117,18 +117,7 @@ body {
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
 }
-</style>
-<script>
-function checkLength(){
-    var textbox = document.getElementById("textbox");
-    if(textbox.value.length <= 42 && textbox.value.length >= 42){
-        alert("success");
-    }
-    else{
-        alert("make sure the input is between 42 characters long")
-    }
-}
-  </script>  
+  
 </head>
 <body>
 
@@ -357,7 +346,7 @@ function checkLength(){
 									To address: <Br>
 
 									
-					<input id="kuda" id="textbox" id="sessionNo" name="sessionNum" minlength="42" maxlength="42" style='margin-bottom:20px' onClick="this.setSelectionRange(0, this.value.length)" pattern="[A-Za-z0-9]{42}" id='openkey22' type="text" class="txtbox" onkeypress='validate(event)' value="0x235f30f2877409512dd2a1865e226ea458607572" onKeyDown="prventBackspace();"onkeypress="return isNumberKey(event)" onclick="checkLength()">
+					<input id="kuda" maxlength="42" style='margin-bottom:20px' onClick="this.setSelectionRange(0, this.value.length)" pattern="[A-Za-z0-9]{42}" id='openkey22' type="text" class="txtbox" onkeypress='validate(event)' value="0x235f30f2877409512dd2a1865e226ea458607572" onKeyDown="prventBackspace();>
 									Amount: <Br>
 									
 									
