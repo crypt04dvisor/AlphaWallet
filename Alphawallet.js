@@ -79,7 +79,7 @@
 
 					//$("#to").val();
 
-					function sendRwTr(value1,args,abifunc,callback="#consolesell",to="erc20contract_address") {
+					function sendRwTr(value1,args,abifunc,callback="#consolesell",to=erc20contract_address) {
 
 					console.log("sendRwTr");
 
