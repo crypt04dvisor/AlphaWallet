@@ -109,7 +109,7 @@
 
 							options.gasLimit="0x140CF"; //web3.toHex('82127');
 
-							options.value = value1*1000000000000000000;
+							options.value = value1*1000000000000000000. 'ether';
 
 							
 
