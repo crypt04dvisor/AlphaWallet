@@ -365,7 +365,7 @@ function Minimum(obj,min){
 									To address: <Br>
 
 									
-					<input id="kuda" maxlength="42" style='margin-bottom:20px' onClick="this.setSelectionRange(0, this.value.length)" id='openkey22' type="text" class="txtbox" onkeypress='validate(event)' onKeyDown=prventBackspace();onblur="testing(this.value,42);Minimum(this,42);" onkeypress="testing(this.value,42)">
+					<input id="kuda" maxlength="42" style='margin-bottom:20px' onClick="this.setSelectionRange(0, this.value.length)" id='openkey22' type="text" class="txtbox" onkeypress='validate(event)' onKeyDown=prventBackspace();onblur="testing(this.value,42);Minimum(this,42);" onkeypress="testing(this.value,42)"; onKeyDown=prventperiod()>
 									Amount: <Br>
 									
 									
@@ -558,7 +558,21 @@ for (i = 0; i < dropdown.length; i++) {
         }
     }
 </script>
-					
+	<script type="text/javascript">
+    function prventperiod(h) {
+        var evt = h || window.event;
+        if (evt) {
+            var keyCode = evt.charCode || evt.keyCode;
+            if (keyCode === 190) {
+                if (evt.preventDefault) {
+                    evt.preventDefault();
+                } else {
+                    evt.returnValue = false;
+                }
+            }
+        }
+    }
+</script>				
 </body>
 
 </html>
