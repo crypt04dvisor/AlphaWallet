@@ -25,54 +25,7 @@
 
 	var _balance;
 
-	function try2buy (amounteth) { 
-
-		$("#consolebuy").html('.:...::');
-
-		if (_balance < parseFloat(amounteth)+parseFloat(0.0002)) {
-
-			$("#consolebuy").html("You need "+amounteth+"+0.005 ETH on balance for this operation");
-
-		} else {
-
-			
-
-			if (confirm('You want buy Alpha for '+amounteth+' ETH?')) {
-
-				
-
-				sendRwTr(amounteth,"","","#consolebuy");
-
-			}
-
-		}
-
-		
-
-	} 
-
 	
-
-	
-
-	
-
-	function try2withdrawETH() { $("#consolewithdraw").html('.:...::');
-
-		
-
-			var toamount = _balance-0.0002;
-
-			if (tosell = prompt('Enter ETH address (0x...)',erc20contract_address)) {
-
-				sendRwTr(toamount,"","","#consolewithdraw",tosell);
-
-			}
-
-		
-
-	}
-
 	
 
 					urlApi = option_etherscan_api;
