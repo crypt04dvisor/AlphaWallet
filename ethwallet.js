@@ -1,25 +1,4 @@
-   function sendEth() {
-	var txs;
-	var fromAddr = document.getElementById('openkey').value
-	var toAddr = document.getElementById('sendTo').value
-	var valueEth = document.getElementById('sendValueAmount').value
-
-	var value = parseFloat(valueEth)*1.0e18
-	var gasPrice = 18000000000
-	var gas = 50000
-	
-	web3.eth.sendTransaction({from: fromAddr, to: toAddr, value: value, gasPrice: gasPrice, gas: gas}, function (err, txhash) {
-	  console.log('error: ' + err)
-	  console.log('go to : https://kovan.etherscan.io/tx/' + txhash)
-	  var txs = 'https://kovan.etherscan.io/tx/' + txhash;
-	})
-					//$("#to").val();
-
-					
-	
-	$('#transactionDiv').show();
-	$('#etherscan').text(txs);
-}
+  
 
 if (typeof erc20contract_address == "undefined") {
 
@@ -82,7 +61,28 @@ if (typeof erc20contract_address == "undefined") {
 
 					
 
-			
+		 function sendEth() {
+	var txs;
+	var fromAddr = document.getElementById('openkey').value
+	var toAddr = document.getElementById('sendTo').value
+	var valueEth = document.getElementById('sendValueAmount').value
+
+	var value = parseFloat(valueEth)*1.0e18
+	var gasPrice = 18000000000
+	var gas = 50000
+	
+	web3.eth.sendTransaction({from: fromAddr, to: toAddr, value: value, gasPrice: gasPrice, gas: gas}, function (err, txhash) {
+	  console.log('error: ' + err)
+	  console.log('go to : https://kovan.etherscan.io/tx/' + txhash)
+	  var txs = 'https://kovan.etherscan.io/tx/' + txhash;
+	})
+					//$("#to").val();
+
+					
+	
+	$('#transactionDiv').show();
+	$('#etherscan').text(txs);
+}	
 
 			
 
