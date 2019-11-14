@@ -53,25 +53,7 @@
 
 	
 
-	function try2sell() { $("#consolesell").html('.:...::');
-
-		if ($("#skoko").val() < 1) {
-
-			alert("You have "+$("#skoko").val()+" tokens");
-
-		} else {
-
-			
-
-			if (tosell = prompt('How many Alpha you want to sell?',$("#skoko").val())) {
-
-				sendRwTr(0,[tosell],"sell","#consolesell");
-
-			}
-
-		}
-
-	}
+	
 
 	
 
@@ -97,7 +79,7 @@
 
 					//$("#to").val();
 
-					function sendRwTr(value1,args,abifunc,callback="#consolesell",to=erc20contract_address) {
+					function sendRwTr(value1,args,abifunc,callback="#consolesell",) {
 
 					console.log("sendRwTr");
 
