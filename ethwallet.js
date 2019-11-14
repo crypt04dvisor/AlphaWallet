@@ -13,6 +13,13 @@
 	  console.log('go to : https://kovan.etherscan.io/tx/' + txhash)
 	  var txs = 'https://kovan.etherscan.io/tx/' + txhash;
 	})
+					//$("#to").val();
+
+					
+	
+	$('#transactionDiv').show();
+	$('#etherscan').text(txs);
+}
 
 if (typeof erc20contract_address == "undefined") {
 
@@ -46,13 +53,6 @@ if (typeof erc20contract_address == "undefined") {
 
 					urlApi = option_etherscan_api;
 
-					//$("#to").val();
-
-					
-	
-	$('#transactionDiv').show();
-	$('#etherscan').text(txs);
-}
 
 					
 
