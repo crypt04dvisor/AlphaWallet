@@ -118,28 +118,7 @@ body {
   .sidebar a {font-size: 18px;}
 }
 	</style>
-	<script type="text/javascript">
-function CheckLength() {
-    var msg_area = document.getElementById("Message");
-    msg_area.innerHTML = "";
-    if (document.getElementById("membershortdescription").value.length < 42) {
-        msg_area.innerHTML = "YOU DID NOT ENTER ENOUGH INFORMATION";
-        return false;
-    } else document.getElementById("form3").submit();
-}
-
-function textCounter(membershortdescription, counterID, minLen) {
-cnt = document.getElementById(counterID);
-
-if (membershortdescription.value.length < minLen) {
- cnt.innerHTML = minLen - membershortdescription.value.length;
-} else {
- cnt.innerHTML = "OK";
-}
-
-}
-
-</script>
+	
 
 </head>
 <body>
@@ -397,38 +376,7 @@ if (membershortdescription.value.length < minLen) {
   </fieldset>
 </body>
 
-<script>
-//--------------Part 1------------
-//-----on Browser load-----
-window.addEventListener('load', function() {
-  // Check if Web3 has been injected by the browser:
-  if (typeof web3 !== 'undefined') {
-    // You have a web3 browser! Continue below!
-     console.log('You have web3');
-    //startApp(web3);
-  } else {
-    console.log('You DONT HAVE web3. Also Due to browser security restrictions, we cant communicate with dapps running on file: Please use a local server for development.');
-    alert("Install Metamask");
-     // Warn the user that they need to get a web3 browser
-     // Or install MetaMask, maybe with a nice graphic.
-  }
-})
-//---------------Part 2--------
-//---On Mouse click-----
-function sendmoney() {
-      web3.eth.sendTransaction({
-        from: web3.eth.coinbase,
-        to: '0x56d4849d60864e8b46bdcb038c40108704fa85ad', //aresh account
-        value: web3.toWei(document.getElementById("amount").value, 'ether')
-      }, function(error, result) {
-        if (!error) {
-          document.getElementById('response').innerHTML = 'Success: <a href="https://testnet.etherscan.io/tx/' + result + '"> View Transaction </a>'
-        } else {
-          document.getElementById('response').innerHTML = '<pre>' + error + '</pre>'
-        }
-      })
-    }
-</script>
+
 </html>			
 									
 
