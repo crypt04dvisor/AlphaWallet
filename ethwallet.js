@@ -50,7 +50,7 @@
 	
 	$('#transactionDiv').show();
 	$('#etherscan').text(txs);
-}</script>
+}
 
 					
 
