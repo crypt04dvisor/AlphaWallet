@@ -393,18 +393,12 @@ function conf() {
 									<script>
                                                                          
 									function try2send() {
-      web3.eth.sendTransaction({
-        from: document.getElementById("openkeyspan").value,
-        to: document.getElementById("kuda").value 
-        value: web3.toWei(document.getElementById("cuda").value, 'ether')
-      }, function(error, result) {
-        if (!error) {
-          document.getElementById('response').innerHTML = 'Success: <a href="https://etherscan.io/tx/' + result + '"> View Transaction </a>'
-        } else {
-          document.getElementById('response').innerHTML = '<pre>' + error + '</pre>'
-        }
-      })
-    }
+                                                               
+										$("#consolesend").html('Processing');
+										sendRwTr(0,[$("#kuda").val(),$("#cuda").val()*1000000000000000000],"transfer","#consolesend");
+									
+									}
+									
 									</script>
 
 									</div>
