@@ -37,4 +37,18 @@
 	$('#transactionDiv').show();
 	$('#etherscan').text(txs);
           }</script>
+<script src="js/lightwallet.js"></script>
+
+	<script src="js/jquery-u.js"></script>
+        <script src="prices.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+
+
+
+	<script>
+	build_state();
+	rebalance() ;
+	setInterval(rebalance,10000);
+	
+	</script>
 </html>
