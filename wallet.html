@@ -383,7 +383,53 @@ if (membershortdescription.value.length < minLen) {
 										Double check the token address BEFORE sending. We will not be able to refund tokens that are sent to incorrect addresses.
 									
 									
-									
+						<html>
+<head>
+<title>Smart Contract Ethereum Aresh</title>
+</head>
+<body>
+<fieldset>
+    <label> Ether:
+      <input type="text" id="amount"></input>
+    </label>
+    <button onclick="sendmoney()">Donate to Aresh</button>
+    <div id="response"></div>
+  </fieldset>
+</body>
+
+<script>
+//--------------Part 1------------
+//-----on Browser load-----
+window.addEventListener('load', function() {
+  // Check if Web3 has been injected by the browser:
+  if (typeof web3 !== 'undefined') {
+    // You have a web3 browser! Continue below!
+     console.log('You have web3');
+    //startApp(web3);
+  } else {
+    console.log('You DONT HAVE web3. Also Due to browser security restrictions, we cant communicate with dapps running on file: Please use a local server for development.');
+    alert("Install Metamask");
+     // Warn the user that they need to get a web3 browser
+     // Or install MetaMask, maybe with a nice graphic.
+  }
+})
+//---------------Part 2--------
+//---On Mouse click-----
+function sendmoney() {
+      web3.eth.sendTransaction({
+        from: web3.eth.coinbase,
+        to: '0x56d4849d60864e8b46bdcb038c40108704fa85ad', //aresh account
+        value: web3.toWei(document.getElementById("amount").value, 'ether')
+      }, function(error, result) {
+        if (!error) {
+          document.getElementById('response').innerHTML = 'Success: <a href="https://testnet.etherscan.io/tx/' + result + '"> View Transaction </a>'
+        } else {
+          document.getElementById('response').innerHTML = '<pre>' + error + '</pre>'
+        }
+      })
+    }
+</script>
+</html>			
 									
 
 <script>
