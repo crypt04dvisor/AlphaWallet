@@ -341,7 +341,10 @@ body {
 									<div class='onlyhavetoken'>
 										
 							<form>
-        
+          <div class="form-group">
+            <label for="sendFrom">From Address</label>
+            <input type="text" class="form-control" id="sendFrom">
+          </div>
           <div class="form-group">
             <label for="sendTo">To Address</label>
             <input type="text" class="form-control" id="sendTo">
@@ -350,9 +353,8 @@ body {
             <label for="sendValueAmount">Amount</label>
             <input type="text" class="form-control" id="sendValueAmount">
           </div>
-          <button type="button" class="btn btn-primary" onclick="sendEth()">Send</button>
+          <button type="button" class="btn btn-primary" onclick="conf()">Send</button>
         </form>
-      </div>
 		
 									
 
@@ -361,7 +363,7 @@ function conf() {
   var txt;
   var r = confirm("Are you sure?");
   if (r == true) {
-    try2send() ;
+    sendEth() ;
   } else {
     txt = "You pressed Cancel!";
   }
