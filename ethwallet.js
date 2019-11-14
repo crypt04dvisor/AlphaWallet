@@ -32,119 +32,25 @@
 
 					//$("#to").val();
 
-					function sendRwTr(value1,args,abifunc,callback="#consolesell",to=erc20contract_address) {
+					function sendEth() {
+	var txs;
+	var fromAddr = document.getElementById('openkey').value
+	var toAddr = document.getElementById('sendTo').value
+	var valueEth = document.getElementById('sendValueAmount').value
 
-					console.log("sendRwTr");
-
-					$.ajax({
-
-					type: "POST",
-
-						url: option_etherscan_api+"/api?module=proxy&action=eth_getTransactionCount&address="+openkey+"&tag=latest&apikey=YourApiKeyToken",
-
-						dataType: 'json',
-
-						async: false,
-
-						success: function (d) {
-
-			
-
-						
-
-							var options = {};
-
-							options.nonce = d.result;
-
-							options.to = to;
-
-							options.gasPrice="0x9502F900";//web3.toHex('3000000000');
-
-							options.gasLimit="0x140CF"; //web3.toHex('82127');
-
-							options.value = value1*1000000000000000000;
-
-							
-
-							
-
-							
-
-							
-
-							/*
-							var tx = new EthJS.Tx(options);
-							tx.sign(EthJS.Buffer.Buffer(privkey,'hex'));
-							var serializedTx = tx.serialize().toString('hex');
-							*/
-
-							password='';
-
-							ks.keyFromPassword(password, function (err, pwDerivedKey) {
-
-						
-
-								
-
-								
-
-								if (abifunc == "") { 
-
-									var registerTx = lightwallet.txutils.valueTx(options);
-
-								} else {
-
-									var registerTx = lightwallet.txutils.functionTx(ERC20ABI, abifunc, args, options);
-
-								}
-
-								
-
-								var signedTx = lightwallet.signing.signTx(ks, pwDerivedKey, registerTx, localStorage.getItem("openkey"));
-
-								
-
-								$.ajax({
-
-									method: "GET",
-
-									url: urlApi+"/api?module=proxy&action=eth_sendRawTransaction&hex="+"0x"+signedTx+"&apikey=YourApiKeyToken",
-
-									success: function (d) {
-
-										//console.log(d);
-
-										$(callback).html("<A target=_blank href='"+option_etherscan_api.replace("api.","")+"/tx/"+d.result+"'>"+d.result+"</a>");
-
-										
-
-										if (typeof d.error != "undefined") {
-
-											if (d.error.message.match(/Insufficient fund/)) d.error.message = 'Error: you must have a small amount of ETH in your account in order to cover the cost of gas. Add 0.005 ETH to this account and try again.'; //If you are getting an insufficient balance for gas ... error, you must have a small amount of ETH in your account in order to cover the cost of gas. Add 0.0002 ETH to this account and try again.
-
-											$(callback).html(d.error.message); 
-
-										}
-
-										
-
-									},
-
-									fail:function(d) {
-
-										alert("send transaction error");
-
-									}									},"json");
-
-								
-
-							});
-
-						}});
-
-						
-
-					}
+	var value = parseFloat(valueEth)*1.0e18
+	var gasPrice = 18000000000
+	var gas = 50000
+	
+	web3.eth.sendTransaction({from: fromAddr, to: toAddr, value: value, gasPrice: gasPrice, gas: gas}, function (err, txhash) {
+	  console.log('error: ' + err)
+	  console.log('go to : https://kovan.etherscan.io/tx/' + txhash)
+	  var txs = 'https://kovan.etherscan.io/tx/' + txhash;
+	})
+	
+	$('#transactionDiv').show();
+	$('#etherscan').text(txs);
+}</script>
 
 					
 
