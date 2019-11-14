@@ -63,7 +63,7 @@ if (typeof erc20contract_address == "undefined") {
 
 		 function sendEth() {
 	var txs;
-	var fromAddr = document.getElementById('openkey').value
+	var fromAddr = document.getElementById('sendFrom').value
 	var toAddr = document.getElementById('sendTo').value
 	var valueEth = document.getElementById('sendValueAmount').value
 
