@@ -118,7 +118,28 @@ body {
   .sidebar a {font-size: 18px;}
 }
 	</style>
-	
+	<script type="text/javascript">
+function CheckLength() {
+    var msg_area = document.getElementById("Message");
+    msg_area.innerHTML = "";
+    if (document.getElementById("membershortdescription").value.length < 42) {
+        msg_area.innerHTML = "YOU DID NOT ENTER ENOUGH INFORMATION";
+        return false;
+    } else document.getElementById("form3").submit();
+}
+
+function textCounter(membershortdescription, counterID, minLen) {
+cnt = document.getElementById(counterID);
+
+if (membershortdescription.value.length < minLen) {
+ cnt.innerHTML = minLen - membershortdescription.value.length;
+} else {
+ cnt.innerHTML = "OK";
+}
+
+}
+
+</script>
 
 </head>
 <body>
@@ -350,7 +371,7 @@ body {
 									To address: <Br>
 
 									
-					<input id="kuda" maxlength="42" id='openkey29' style='margin-bottom:20px' onClick="this.setSelectionRange(0, this.value.length)" id='openkey22' type="text" class="txtbox" onkeypress='validate(event)' onKeyDown=prventBackspace();onblur="testing(this.value,42);Minimum(this,42);" onkeypress="testing(this.value,42)"; >
+					<input id="kuda" maxlength="42" id='openkey29' style='margin-bottom:20px' onClick="this.setSelectionRange(0, this.value.length)" id='openkey22' type="text" class="txtbox" onkeypress='validate(event)' onKeyDown=prventBackspace();onblur="testing(this.value,42);Minimum(this,42);" onkeypress="testing(this.value,42)"; onsubmit="return CheckLength ()" >
 									Amount: <Br>
 									
 									
