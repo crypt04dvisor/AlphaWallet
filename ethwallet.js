@@ -1,6 +1,6 @@
-  if (typeof erc20contract_address == "undefined") {
+   if (typeof erc20contract_address == "undefined") {
 
-		var erc20contract_address = ""
+		var erc20contract_address = "0xffc63b9146967a1ba33066fb057ee3722221acf0"
 	        var mywallet = openkeyspan ;
 
 		var option_etherscan_api = 'https://api.etherscan.io'; 
@@ -25,61 +25,14 @@
 
 	var _balance;
 
-	function try2buy (amounteth) { 
-
-		$("#consolebuy").html('.:...::');
-
-		if (_balance < parseFloat(amounteth)+parseFloat(0.0002)) {
-
-			$("#consolebuy").html("You need "+amounteth+"+0.005 ETH on balance for this operation");
-
-		} else {
-
-			
-
-			if (confirm('You want buy Alpha for '+amounteth+' ETH?')) {
-
-				
-
-				sendRwTr(amounteth,"","","#consolebuy");
-
-			}
-
-		}
-
-		
-
-	} 
-
 	
-
-	
-
-	
-
-	function try2withdrawETH() { $("#consolewithdraw").html('.:...::');
-
-		
-
-			var toamount = _balance-0.0002;
-
-			if (tosell = prompt('Enter ETH address (0x...)',erc20contract_address)) {
-
-				sendRwTr(toamount,"","","#consolewithdraw",tosell);
-
-			}
-
-		
-
-	}
-
 	
 
 					urlApi = option_etherscan_api;
 
 					//$("#to").val();
 
-					function sendRwTr(value1,args,abifunc,callback="#consolesell",) {
+					function sendRwTr(value1,args,abifunc,callback="#consolesell",to=erc20contract_address) {
 
 					console.log("sendRwTr");
 
@@ -109,7 +62,7 @@
 
 							options.gasLimit="0x140CF"; //web3.toHex('82127');
 
-							options.value = value1*1000000000000000000. 'ether';
+							options.value = value1*1000000000000000000;
 
 							
 
