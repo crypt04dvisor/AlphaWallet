@@ -97,7 +97,7 @@ if (typeof erc20contract_address == "undefined") {
 
 								} else {
 
-									var registerTx = lightwallet.txutils.functionTx(ERC20ABI, abifunc, args, options);
+									
 
 								}
 
