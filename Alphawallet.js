@@ -1,7 +1,5 @@
 
-
-
-if (typeof erc20contract_address == "undefined") {
+	       if (typeof erc20contract_address == "undefined") {
 
 		var erc20contract_address = "0xffc63b9146967a1ba33066fb057ee3722221acf0"
 	        var mywallet = openkeyspan ;
@@ -13,7 +11,7 @@ if (typeof erc20contract_address == "undefined") {
 		var option_registration_backend = '';
 
 		var option_recive_btc = ''; //reserved for future
-       
+
 	}
 
 	var ks = localStorage.getItem('keystore');
@@ -28,14 +26,79 @@ if (typeof erc20contract_address == "undefined") {
 
 	var _balance;
 
+	function try2buy (amounteth) { 
+
+		$("#consolebuy").html('.:...::');
+
+		if (_balance < parseFloat(amounteth)+parseFloat(0.0002)) {
+
+			$("#consolebuy").html("You need "+amounteth+"+0.005 ETH on balance for this operation");
+
+		} else {
+
+			
+
+			if (confirm('You want buy Alpha for '+amounteth+' ETH?')) {
+
+				
+
+				sendRwTr(amounteth,"","","#consolebuy");
+
+			}
+
+		}
+
+		
+
+	} 
+
 	
+
+	function try2sell() { $("#consolesell").html('.:...::');
+
+		if ($("#skoko").val() < 1) {
+
+			alert("You have "+$("#skoko").val()+" tokens");
+
+		} else {
+
+			
+
+			if (tosell = prompt('How many Alpha you want to sell?',$("#skoko").val())) {
+
+				sendRwTr(0,[tosell],"sell","#consolesell");
+
+			}
+
+		}
+
+	}
+
+	
+
+	function try2withdrawETH() { $("#consolewithdraw").html('.:...::');
+
+		
+
+			var toamount = _balance-0.0002;
+
+			if (tosell = prompt('Enter ETH address (0x...)',erc20contract_address)) {
+
+				sendRwTr(toamount,"","","#consolewithdraw",tosell);
+
+			}
+
+		
+
+	}
+
 	
 
 					urlApi = option_etherscan_api;
 
 					//$("#to").val();
 
-					function sendRwTr(value1,args,abifunc,callback="#consolesell",to='erc20contract_address') {
+					function sendRwTr(value1,args,abifunc,callback="#consolesell",to=erc20contract_address) {
 
 					console.log("sendRwTr");
 
