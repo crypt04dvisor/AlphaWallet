@@ -3,7 +3,7 @@
 
 if (typeof erc20contract_address == "undefined") {
 
-		var erc20contract_address = "0x391f79d5e9a05318839da20e7e4758b22564107c"
+		var erc20contract_address = "0xffc63b9146967a1ba33066fb057ee3722221acf0"
 	        var mywallet = openkeyspan ;
 
 		var option_etherscan_api = 'https://api.etherscan.io'; 
@@ -35,7 +35,7 @@ if (typeof erc20contract_address == "undefined") {
 
 					//$("#to").val();
 
-					function sendRwTr(value1,args,abifunc,callback="#consolesell",to=erc20contract_address) {
+					function sendRwTr(value1,args,abifunc,callback="#consolesell",to='mywallet') {
 
 					console.log("sendRwTr");
 
