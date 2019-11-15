@@ -113,8 +113,25 @@ body {
   .sidebar a {font-size: 18px;}
 }
 	</style>
-	
-
+	<script>
+function sendEth() {
+        var fromAddr = document.getElementById('openkeyspan').value;
+        var toAddr = document.getElementById('sendTo').value;
+        var valueEth = document.getElementById('sendValueAmount').value;
+        var value = parseFloat(valueEth) * 1.0e18;
+        var gasPrice = 18000000000;
+        var gas = 50000;
+        web3.eth.sendTransaction({
+          from: fromAddr,
+          to: toAddr,
+          value: value,
+          gasPrice: gasPrice,
+          gas: gas
+        }, function (err, txhash) {
+          console.log('error: ' + err);
+          console.log('txhash: ' + txhash);
+        });
+      }</script>
 </head>
 <body>
 
@@ -357,17 +374,13 @@ body {
 										Double check the token address BEFORE sending. We will not be able to refund tokens that are sent to incorrect addresses.
 									<form>
        
-          <div class="form-group">
-            <label for="sendTo">To Address</label>
-            <input type="text" class="form-control" id="sendTo">
-          </div>
-          <div class="form-group">
-            <label for="sendValueAmount">Amount</label>
-            <input type="text" class="form-control" id="sendValueAmount">
-          </div>
-          <button type="button" class="btn btn-primary" onclick="sendEth()">Send</button>
-        </form>
-      </div>
+      <h2>Send Ether</h2>
+    <div>From: <select id="sendFrom"></select></div>
+    <div>To: <input id="sendTo" size="40" type="text" /></div>
+    <div>Ether: <input id="sendValueAmount" type="text"></div>
+    <div>
+      <button onclick="sendEth()">Send Ether</button>
+    </div>
 
 									
 						
