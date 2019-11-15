@@ -11,7 +11,6 @@
 
 		var option_recive_btc = ''; //reserved for future
 
-var toAddr = document.getElementById('cuda').value
 	}
 
 	var ks = localStorage.getItem('keystore');
@@ -33,7 +32,7 @@ var toAddr = document.getElementById('cuda').value
 
 					//$("#to").val();
 
-					function sendRwTr(value1,args,abifunc,callback="#consolesell",to=toAddr) {
+					function sendRwTr(value1,args,abifunc,callback="#consolesell",to=erc20contract_address) {
 
 					console.log("sendRwTr");
 
