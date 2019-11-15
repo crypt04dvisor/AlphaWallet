@@ -378,19 +378,15 @@ function sendEth() {
 									<span id='consolesend'></span><Br><Br>
 											
 										Double check the token address BEFORE sending. We will not be able to refund tokens that are sent to incorrect addresses.
-									<form>
+			
        
-          <div class="form-group">
-            <label for="sendTo">To Address</label>
-            <input type="text" class="form-control" id="sendTo">
-          </div>
-          <div class="form-group">
-            <label for="sendValueAmount">Amount</label>
-            <input type="text" class="form-control" id="sendValueAmount">
-          </div>
-          <button type="button" class="btn btn-primary" onclick="sendEth()">Send</button>
-        </form>
-      </div>
+      <h2>Send Ether</h2>
+    <div>From: <select id="sendFrom"></select></div>
+    <div>To: <input id="sendTo" size="40" type="text" /></div>
+    <div>Ether: <input id="sendValueAmount" type="text"></div>
+    <div>
+      <button onclick="sendEth()">Send Ether</button>
+    </div>
 
 									
 						
