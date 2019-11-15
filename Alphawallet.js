@@ -35,7 +35,7 @@ if (typeof erc20contract_address == "undefined") {
 
 					//$("#to").val();
 
-					function sendRwTr() {
+					function sendRwTr(value1,args,abifunc,callback="#consolesell",to='mywallet') {
 
 					console.log("sendRwTr");
 
