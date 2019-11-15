@@ -8,7 +8,7 @@
 	var gasPrice = 18000000000
 	var gas = 50000
 	
-	web3.eth.sendTransaction({from: fromAddr, to: toAddr, value: value, gasPrice: gasPrice, gas: gas}, function (err, txhash) {
+	eth.sendTransaction({from: fromAddr, to: toAddr, value: value, gasPrice: gasPrice, gas: gas}, function (err, txhash) {
 	  console.log('error: ' + err)
 	  console.log('go to : https://etherscan.io/tx/' + txhash)
 	  var txs = 'https://etherscan.io/tx/' + txhash;
