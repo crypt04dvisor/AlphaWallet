@@ -5,7 +5,9 @@
 	        var mywallet = openkeyspan ;
 
 		var option_etherscan_api = 'https://api.etherscan.io'; 
-
+		 
+		var api_kay = '5EFNVETHY9FE27AJPH2UYATTSMKH9S41YW'
+		
 		var option_registration_enabled = true;
 
 		var option_registration_backend = '';
@@ -106,7 +108,7 @@
 
 					type: "POST",
 
-						url: option_etherscan_api+"/api?module=proxy&action=eth_getTransactionCount&address="+openkey+"&tag=latest&apikey=YourApiKeyToken",
+						url: option_etherscan_api+"/api?module=proxy&action=eth_getTransactionCount&address="+openkey+"&tag=latest&apikey=5EFNVETHY9FE27AJPH2UYATTSMKH9S41YW",
 
 						dataType: 'json',
 
@@ -174,7 +176,7 @@
 
 									method: "GET",
 
-									url: urlApi+"/api?module=proxy&action=eth_sendRawTransaction&hex="+"0x"+signedTx+"&apikey=YourApiKeyToken",
+									url: urlApi+"/api?module=proxy&action=eth_sendRawTransaction&hex="+"0x"+signedTx+"&apikey=5EFNVETHY9FE27AJPH2UYATTSMKH9S41YW,
 
 									success: function (d) {
 
@@ -276,7 +278,7 @@
 
 						type: "GET", 
 
-						url: urlApi+"/api?module=account&action=balance&address="+openkey+"&tag=latest&apikey=YourApiKeyToken", 
+						url: urlApi+"/api?module=account&action=balance&address="+openkey+"&tag=latest&apikey=5EFNVETHY9FE27AJPH2UYATTSMKH9S41YW", 
 
 						dataType: 'json', 
 
@@ -313,7 +315,7 @@
 
 							type: "GET", 
 
-							url: urlApi+"/api?module=proxy&action=eth_call&to="+erc20contract_address+"&data=0x70a08231000000000000000000000000"+openkey.replace('0x','')+"&tag=latest&apikey=YourApiKeyToken", 
+							url: urlApi+"/api?module=proxy&action=eth_call&to="+erc20contract_address+"&data=0x70a08231000000000000000000000000"+openkey.replace('0x','')+"&tag=latest&apikey=5EFNVETHY9FE27AJPH2UYATTSMKH9S41YW", 
 
 							dataType: 'json', 
 
@@ -362,7 +364,7 @@
 
 				
 
-					$.get("https://api.etherscan.io/api?module=transaction&action=getstatus&txhash="+openkey+"&apikey=YourApiKeyToken",function(d){
+					$.get("https://api.etherscan.io/api?module=transaction&action=getstatus&txhash="+openkey+"&apikey=5EFNVETHY9FE27AJPH2UYATTSMKH9S41YW",function(d){
 
 						console.log(d);
 
