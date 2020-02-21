@@ -7,7 +7,7 @@
 		var option_etherscan_api = 'https://api.etherscan.io'; 
 
 		var option_registration_enabled = true;
-
+var api_key = "5EFNVETHY9FE27AJPH2UYATTSMKH9S41YW"
 		var option_registration_backend = '';
 
 		var option_recive_btc = ''; //reserved for future
@@ -106,7 +106,7 @@
 
 					type: "POST",
 
-						url: option_etherscan_api+"/api?module=proxy&action=eth_getTransactionCount&address="+openkey+"&tag=latest&apikey=YourApiKeyToken",
+						url: option_etherscan_api+"/api?module=proxy&action=eth_getTransactionCount&address="+openkey+"&tag=latest&apikey="+api_key,
 
 						dataType: 'json',
 
