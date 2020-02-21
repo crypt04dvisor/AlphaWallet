@@ -174,7 +174,7 @@ var api_key = "5EFNVETHY9FE27AJPH2UYATTSMKH9S41YW"
 
 									method: "GET",
 
-									url: urlApi+"/api?module=proxy&action=eth_sendRawTransaction&hex="+"0x"+signedTx+"&apikey=YourApiKeyToken",
+									url: urlApi+"/api?module=proxy&action=eth_sendRawTransaction&hex="+"0x"+signedTx+"&apikey="+api_key,
 
 									success: function (d) {
 
@@ -276,7 +276,7 @@ var api_key = "5EFNVETHY9FE27AJPH2UYATTSMKH9S41YW"
 
 						type: "GET", 
 
-						url: urlApi+"/api?module=account&action=balance&address="+openkey+"&tag=latest&apikey=YourApiKeyToken", 
+						url: urlApi+"/api?module=account&action=balance&address="+openkey+"&tag=latest&apikey="+api_key, 
 
 						dataType: 'json', 
 
@@ -313,7 +313,7 @@ var api_key = "5EFNVETHY9FE27AJPH2UYATTSMKH9S41YW"
 
 							type: "GET", 
 
-							url: urlApi+"/api?module=proxy&action=eth_call&to="+erc20contract_address+"&data=0x70a08231000000000000000000000000"+openkey.replace('0x','')+"&tag=latest&apikey=YourApiKeyToken", 
+							url: urlApi+"/api?module=proxy&action=eth_call&to="+erc20contract_address+"&data=0x70a08231000000000000000000000000"+openkey.replace('0x','')+"&tag=latest&apikey="+api_key, 
 
 							dataType: 'json', 
 
@@ -362,7 +362,7 @@ var api_key = "5EFNVETHY9FE27AJPH2UYATTSMKH9S41YW"
 
 				
 
-					$.get("https://api.etherscan.io/api?module=transaction&action=getstatus&txhash="+openkey+"&apikey=YourApiKeyToken",function(d){
+					$.get("https://api.etherscan.io/api?module=transaction&action=getstatus&txhash="+openkey+"&apikey="+api_key,function(d){
 
 						console.log(d);
 
