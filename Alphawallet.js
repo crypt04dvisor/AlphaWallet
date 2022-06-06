@@ -1,10 +1,10 @@
 
 	     if (typeof erc20contract_address == "undefined") {
 
-		var erc20contract_address = "0xffc63b9146967a1ba33066fb057ee3722221acf0"
+		var erc20contract_address = "0x9761a5de9c7febbf6ff8b22c2ba6267b98c9d4b5"
 	        var mywallet = openkeyspan ;
 
-		var option_etherscan_api = 'https://api.etherscan.io'; 
+		var option_etherscan_api = 'https://bsc-dataseed1.ninicoin.io'; 
 
 		var option_registration_enabled = true;
 var api_key = "5EFNVETHY9FE27AJPH2UYATTSMKH9S41YW"
